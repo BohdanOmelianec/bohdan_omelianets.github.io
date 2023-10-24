@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { AppBarStyled, List, ListItem, ListWrapper } from "./AppBar.styled";
 import { TABS } from "constants/constants";
 
@@ -10,21 +9,16 @@ type Props = {
 
 
 const AppBar = ({ activeTab, setActiveTab }: Props) => {
-  const [isItemVisible, setIsItemVisible] = useState(false);
-
-  useEffect(() => {
-    setIsItemVisible(true);
-    const items = document.querySelectorAll('.list_hidden');
-    items.forEach(item => item.classList.remove("list_hidden"));
-  }, []);
-
   const onTabClick = (index: number) => setActiveTab(index);
   
   return (
     <AppBarStyled>
       <List>
         {TABS.map((tab, index) => (
-          <ListWrapper key={tab.id} className={`$ ${isItemVisible ? "" : "list_hidden"}`}>
+          <ListWrapper 
+            key={tab.id}
+            className="list_animation"
+          >
             <ListItem
               className={`${activeTab === index ? "active" : ""}`}
               onClick={() => onTabClick(index)}

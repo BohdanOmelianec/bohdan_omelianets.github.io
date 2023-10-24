@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled, { css, keyframes } from 'styled-components';
 import { APP_BAR_HEIGHT, COLORS, TABS } from 'constants/constants';
 
@@ -6,10 +6,9 @@ const tabsRotateTime = 1.2;
 const scaleItemTime = 0.6;
 
 const Container = styled.div`
-  width: min(100%, 1440px);
+  width: 100%;
   height: calc(100% - ${APP_BAR_HEIGHT}px);
-  margin-inline: auto;
-  padding: 16px;
+  // padding: 16px;
   transform-style: preserve-3d;
   perspective: 1800px;
   position: relative;
@@ -22,47 +21,57 @@ const rotate = keyframes`
     transform:
       rotateY(270deg)
   }
-`
+`;
+const appear = keyframes`
+  to {
+    width: 100%;
+    height: 100%;
+  }
+`;
 
-const TabsWrapper = styled.div<{ $activeTab: number }>`
+const TabsWrapper = styled.div<{ $activeTab: number, $sideWidth: number }>`
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  animation: ${rotate} 2.5s;
-  transform: rotateY(calc(${props => props.$activeTab} * 60deg));
+  transform-origin: left;
+
+  // animation: ${rotate} 2.5s;
+  transform: rotateY(calc(${props => props.$activeTab} * -90deg));
   transition: transform ${tabsRotateTime}s ${scaleItemTime}s ease-out;
 
 `
 
 const Tab = styled.div<{$hexRadius: number, $sideWidth: number, $index: number}>`
   ${({$hexRadius, $sideWidth, $index}) => css`
-    width: ${$sideWidth * .8}px;
-    aspect-ratio: 2/1;
+    width: 70%;
+    height: 70%;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 0;
     backface-visibility: hidden;
     background: ${COLORS.darkViolet};
     border: 1px solid ${COLORS.lightBlue};
-    border-radius: 25px;
+    border-left: none;
+    border-radius: 0 25px 25px 0;
     box-shadow:
       0px 0px 20px -5px ${COLORS.lightBlue},
-      0px 0px 25px -5px ${COLORS.pink};
+      0px 0px 22px -5px ${COLORS.pink};
     transition: all ${scaleItemTime}s;
-    filter: blur(8px);
+    transform-origin: left;
     transform:
-      translate(-50%, -50%)
-      rotateY(calc(${$index} * -60deg))
-      translateZ(${-$hexRadius}px);
-      will-change: transform;
+      translate(0, -50%)
+      rotateY(calc(${$index} * 90deg));
+    will-change: transform;
       
     &.active {
-      transition-delay: ${scaleItemTime + tabsRotateTime}s;
-      filter: blur(0);
-      transform:
-        translate(-50%, -50%)
-        rotateY(calc(${$index} * -60deg))
-        translateZ(${0}px);
+      // opacity: 1;
+      transition-delay: ${tabsRotateTime + scaleItemTime}s;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
     }
   `}
 `
@@ -83,7 +92,7 @@ const Tabs = ({ activeTab }: Props) => {
 
   return (
     <Container>
-      <TabsWrapper $activeTab={activeTab || 0} className='tabs_wrapper' ref={tabsWrapper as React.LegacyRef<HTMLDivElement>}>
+      <TabsWrapper $activeTab={activeTab || 0} $sideWidth={sideWidth} className='tabs_wrapper' ref={tabsWrapper as React.LegacyRef<HTMLDivElement>}>
         {TABS.map((tab, index) => (
           <Tab
             key={tab.id}

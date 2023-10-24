@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { APP_BAR_HEIGHT, COLORS } from "constants/constants";
 
 
@@ -15,34 +15,36 @@ export const AppBarStyled = styled.div`
 
 export const List = styled.ul`
   display: flex;
-  gap: 1rem;
+  gap: 12px;
 `;
+
+const slideIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+`
 
 export const ListWrapper = styled.div`
   opacity: 1;
   transform: translateX(0);
-  transition: opacity 1.5s, transform 1.5s;
 
-  &.list_hidden {
-    opacity: 0;
-    transform: translateX(150%);
+  &.list_animation {
+    animation: ${slideIn} 1s backwards;
   }
 
-  &:nth-child(1) {
-    transition-delay: .5s;
-  }
   &:nth-child(2) {
-      transition-delay: .7s;
+    animation-delay: .25s;
   }
   &:nth-child(3) {
-      transition-delay: .9s;
+    animation-delay: .5s;
   }
 `
 
-const border = `.2rem solid ${COLORS.pink}`
+const border = `2px solid ${COLORS.pink}`
 export const ListItem = styled.li`
-  padding: .5rem 1rem;
-  font-size: 1.2rem;
+  padding: 6px 12px;
+  font-size: 16px;
   cursor: pointer;
   position: relative;
   user-select: none;
@@ -51,8 +53,8 @@ export const ListItem = styled.li`
 
   &:before, &:after {
     content: "";
-    width: 0rem;
-    height: 0rem;
+    width: 0px;
+    height: 0px;
     position: absolute;
     transition:
       width .4s ease-out,
@@ -66,16 +68,16 @@ export const ListItem = styled.li`
   &.active {
     color: #fff;
     &:before {
-      width: 1rem;
-      height: 1rem;
+      width: 12px;
+      height: 12px;
       border-bottom: ${border};
       border-left: ${border};
       bottom: 0;
       left: 0;
     }
     &:after {
-      width: 1rem;
-      height: 1rem;
+      width: 12px;
+      height: 12px;
       border-right: ${border};
       border-top: ${border};
       top: 0;
