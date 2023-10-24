@@ -1,13 +1,51 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  color: #d3d3d3;
+  font-family: GabaritoRegular;
+  font-size: calc(var(--index) * .7);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --index: calc(1vw + 1vh);
+}
+
+@font-face {
+  font-family: 'GabaritoRegular';
+  src: url('fonts/Gabarito-Regular.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'GabaritoMedium';
+  src: url('fonts/Gabarito-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'GabaritoSemiBold';
+  src: url('fonts/Gabarito-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'GabaritoBold';
+  src: url('fonts/Gabarito-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'GabaritoExtraBold';
+  src: url('fonts/Gabarito-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'GabaritoBlack';
+  src: url('fonts/Gabarito-Black.ttf') format('truetype');
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#tsparticles {
+  z-index: -1;
+  height: 100vh;
 }
