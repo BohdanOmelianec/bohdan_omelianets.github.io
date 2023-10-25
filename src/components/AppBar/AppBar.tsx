@@ -1,5 +1,6 @@
+import { TABS } from "components/Tabs/Tabs";
 import { AppBarStyled, List, ListItem, ListWrapper } from "./AppBar.styled";
-import { TABS } from "constants/constants";
+
 
 
 type Props = {

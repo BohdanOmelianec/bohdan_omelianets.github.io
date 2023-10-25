@@ -12,6 +12,15 @@ const Container = () => {
     setTimeout(() => setActiveTab(0), 1500);
   }, []);
 
+  // useEffect(() => {
+  //   const searchParams = new URLSearchParams();
+  //   if(activeTab !== undefined) {
+  //     searchParams.set("i", String(activeTab));
+  //     searchParams.set("t", String(TABS[activeTab].title));
+  //     window.history.replaceState({}, '', `${window.location.pathname}?${searchParams}`);
+  //   }
+  // }, [activeTab]);
+
   return (
     <ContainerStyled>
       <AppBar activeTab={activeTab} setActiveTab={setActiveTab} />
