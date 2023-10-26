@@ -1,8 +1,8 @@
 
 export const COLORS = {
+  textColor: "#d3d3d3",
   darkViolet: "#0e0117",
-  lightBlue: "#2d94f0",
-  pink: "#ff00f1",
+  accentBlue: "#2d94f0",
+  accentPink: "#f12fe7",
+  gradient: "linear-gradient(45deg, var(--accentBlue) 0%, var(--accentPink) 100%)",
 }
-
-export const APP_BAR_HEIGHT = 60;

@@ -1,12 +1,12 @@
 import styled, { css, keyframes } from 'styled-components';
-import { APP_BAR_HEIGHT, COLORS } from 'constants/constants';
+import { COLORS } from 'constants/constants';
 
 export const tabsRotateTime = 1.2;
 export const scaleItemTime = 0.6;
 
 export const Container = styled.div`
   width: 100%;
-  height: calc(100% - ${APP_BAR_HEIGHT}px);
+  height: calc(100% - var(--appBarHeight));
   transform-style: preserve-3d;
   perspective: 1800px;
   position: relative;
@@ -50,12 +50,12 @@ export const Tab = styled.div<{ $index: number }>`
     left: 0;
     backface-visibility: hidden;
     background: ${COLORS.darkViolet};
-    border: 1px solid ${COLORS.lightBlue};
+    border: 1px solid ${COLORS.accentBlue};
     border-left: none;
     border-radius: 0 25px 25px 0;
     box-shadow:
-      0px 0px 20px -5px ${COLORS.lightBlue},
-      0px 0px 22px -5px ${COLORS.pink};
+      0px 0px 20px -5px ${COLORS.accentBlue},
+      0px 0px 22px -5px ${COLORS.accentPink};
     transition: all ${scaleItemTime}s;
     transform-origin: left;
     transform:

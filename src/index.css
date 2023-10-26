@@ -6,13 +6,22 @@
   outline: none;
   text-decoration: none;
   list-style-type: none;
-  color: #d3d3d3;
+  color: var(--textColor);
   font-family: GabaritoRegular;
-  font-size: calc(var(--index) * .7);
 }
 
 :root {
   --index: calc(1vw + 1vh);
+
+  --appBarHeight: 60px;
+
+  --textColor: #e5e5e5;
+  --accentBlue: #2d94f0;
+  --accentPink: #f071ea;
+  --darkViolet: #09010e;
+  --darkStaleBlue: #0a1825;
+  --darkStaleBlueTr: #0a1825ba;
+  --gradient: linear-gradient(45deg, var(--accentBlue) 0%, var(--accentPink) 100%);
 }
 
 @font-face {
@@ -42,11 +51,15 @@
 
 body {
   width: 100%;
-  height: 100vh;
-  background: #0e0117;
+  min-height: 100vh;
+  background: var(--darkViolet);
+  font-size: calc(var(--index) * .7);
 }
 
 #tsparticles {
-  z-index: -1;
-  height: 100vh;
+  /* height: 100vh; */
+}
+
+.accent_pink {
+  color: var(--accentPink);
 }

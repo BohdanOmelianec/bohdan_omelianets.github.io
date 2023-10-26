@@ -7,7 +7,7 @@ import { loadSlim } from "tsparticles-slim";
 const options: ISourceOptions = {
   background: {
     color: {
-      value: "#0e0117",
+      value: "#09010e",
     },
   },
   fpsLimit: 60,
@@ -16,12 +16,21 @@ const options: ISourceOptions = {
       onHover: {
         enable: true,
         mode: "grab",
+        parallax: {
+          enable: true,
+          smooth: 10,
+          force: 60,
+      },
       },
       resize: true,
     },
     modes: {
       grab: {
-        distance: 150,
+        distance: 300,
+        links: {
+          opacity: 0.6,
+          color: "#f071ea",
+      },
       }
     },
   },
@@ -31,9 +40,9 @@ const options: ISourceOptions = {
     },
     links: {
       color: "#2d94f0",
-      distance: 120,
+      distance: 700,
       enable: true,
-      opacity: 0.5,
+      opacity: 0.3,
       width: 1,
     },
     move: {
@@ -48,13 +57,12 @@ const options: ISourceOptions = {
     },
     number: {
       density: {
-        enable: true,
-        area: 1900,
+        enable: false,
       },
-      value: 200,
+      value: 13,
     },
     opacity: {
-      value: 0.5,
+      value: 0.3,
     },
     shape: {
       type: "circle",
@@ -77,6 +85,7 @@ const ParticlesBG = () => {
       id="tsparticles"
       init={particlesInit}
       options={options}
+      style={{position: "relative"}}
     />
   );
 };

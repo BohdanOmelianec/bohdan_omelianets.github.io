@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-import { ContainerStyled } from './Container.styled';
-import AppBar from 'components/AppBar/AppBar';
-import Tabs from 'components/Tabs/Tabs';
+import { ContentContainer, MainContainer } from './Container.styled';
+import AppBar from 'components/AppBar';
+import Hero from 'components/Hero';
 
 
 const Container = () => {
@@ -22,10 +22,12 @@ const Container = () => {
   // }, [activeTab]);
 
   return (
-    <ContainerStyled>
+    <MainContainer>
       <AppBar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <Tabs activeTab={activeTab} />
-    </ContainerStyled>
+      <ContentContainer>
+        <Hero />
+      </ContentContainer>
+    </MainContainer>
   )
 }
 

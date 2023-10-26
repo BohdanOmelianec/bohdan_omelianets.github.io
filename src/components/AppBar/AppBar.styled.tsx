@@ -1,16 +1,32 @@
 import styled, { keyframes } from "styled-components";
-import { APP_BAR_HEIGHT, COLORS } from "constants/constants";
 
 
-export const AppBarStyled = styled.div`
+export const AppBarStyled = styled.nav`
   width: 100%;
-  height: ${APP_BAR_HEIGHT}px;
-  padding: 6px 12px;
+  height: var(--appBarHeight);
+  padding: 8px 16px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  position: relative;
-  z-index: 10;
+  justify-content: space-between;
+`;
+
+const slideInLogo = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+`;
+
+export const Logo = styled.div`
+  opacity: 1;
+  color: var(--textColor);
+  font-size: calc(var(--index) * 1.2);
+  cursor: pointer;
+  user-select: none;
+
+  & {
+    animation: ${slideInLogo} 1.5s backwards;
+  }
 `;
 
 export const List = styled.ul`
@@ -23,28 +39,12 @@ const slideIn = keyframes`
     opacity: 0;
     transform: translateX(150%);
   }
-`
+`;
 
-export const ListWrapper = styled.div`
-  opacity: 1;
-  transform: translateX(0);
-
-  &.list_animation {
-    animation: ${slideIn} 1s backwards;
-  }
-
-  &:nth-child(2) {
-    animation-delay: .25s;
-  }
-  &:nth-child(3) {
-    animation-delay: .5s;
-  }
-`
-
-const border = `2px solid ${COLORS.pink}`
+const border = `2px solid var(--accentPink)`
 export const ListItem = styled.li`
   padding: 6px 12px;
-  font-size: 16px;
+  font-size: var(--index);
   cursor: pointer;
   position: relative;
   user-select: none;
@@ -63,10 +63,10 @@ export const ListItem = styled.li`
   }
 
   &:hover {
-    color: ${COLORS.pink};
+    color: var(--accentPink);
   }
   &.active {
-    color: #fff;
+    color: var(--textColor);
     &:before {
       width: 12px;
       height: 12px;
@@ -83,5 +83,18 @@ export const ListItem = styled.li`
       top: 0;
       right: 0;
     }
+  }
+  opacity: 1;
+  transform: translateX(0);
+
+  & {
+    animation: ${slideIn} 1s backwards;
+  }
+
+  &:nth-child(2) {
+    animation-delay: .25s;
+  }
+  &:nth-child(3) {
+    animation-delay: .5s;
   }
 `;

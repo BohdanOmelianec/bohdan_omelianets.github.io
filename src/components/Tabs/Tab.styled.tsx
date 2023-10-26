@@ -16,7 +16,7 @@ export const Title = styled.h2<{ $showContent: boolean }>`
   transition: opacity ${scaleItemTime / 2}s;
   & .title_accent {
     font-size: inherit;
-    color: ${COLORS.pink};
+    color: ${COLORS.accentPink};
     display: block;
     margin-left: 150px;
   }

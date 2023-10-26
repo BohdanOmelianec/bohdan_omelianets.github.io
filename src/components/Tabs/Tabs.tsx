@@ -38,7 +38,7 @@ const Tabs = ({ activeTab }: Props) => {
 
   return (
     <Container>
-      <TabsWrapper $activeTab={activeTab || 0} className="tabs_wrapper">
+      {/* <TabsWrapper $activeTab={activeTab || 0} className="tabs_wrapper">
         {TABS.map((tab, index) => (
           <Tab
             key={tab.id}
@@ -53,7 +53,7 @@ const Tabs = ({ activeTab }: Props) => {
             />
           </Tab>
         ))}
-      </TabsWrapper>
+      </TabsWrapper> */}
     </Container>
   );
 };

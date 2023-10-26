@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
-export const ContainerStyled = styled.div`
-  width: min(100%, 1920px);
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+export const MainContainer = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+`;
+
+export const ContentContainer = styled.main`
+  width: min(100%, 1440px);
+  margin-inline: auto;
 `;
