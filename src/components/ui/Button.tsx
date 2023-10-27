@@ -10,4 +10,5 @@ export const Button = styled.button`
   font-size: 18px;
   padding: 8px 16px;
   border-radius: 10px;
+  white-space: nowrap;
 `;

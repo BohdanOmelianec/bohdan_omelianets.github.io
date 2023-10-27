@@ -8,6 +8,7 @@ export const AppBarStyled = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
 `;
 
 const slideInLogo = keyframes`
@@ -23,6 +24,7 @@ export const Logo = styled.div`
   font-size: calc(var(--index) * 1.2);
   cursor: pointer;
   user-select: none;
+  white-space: nowrap;
 
   & {
     animation: ${slideInLogo} 1.5s backwards;
@@ -44,10 +46,11 @@ const slideIn = keyframes`
 const border = `2px solid var(--accentPink)`
 export const ListItem = styled.li`
   padding: 6px 12px;
-  font-size: var(--index);
+  font-size: calc(var(--index) * .8);
   cursor: pointer;
   position: relative;
   user-select: none;
+  white-space: nowrap;
   color: #9d9d9d;
   transition: color .4s;
 

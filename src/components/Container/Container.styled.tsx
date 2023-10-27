@@ -10,5 +10,6 @@ export const MainContainer = styled.div`
 
 export const ContentContainer = styled.main`
   width: min(100%, 1440px);
+  padding-top: var(--appBarHeight);
   margin-inline: auto;
 `;

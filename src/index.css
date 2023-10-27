@@ -17,10 +17,11 @@
 
   --textColor: #e5e5e5;
   --accentBlue: #2d94f0;
+  --accentBlueTr: #2d94f0ba;
   --accentPink: #f071ea;
   --darkViolet: #09010e;
-  --darkStaleBlue: #0a1825;
-  --darkStaleBlueTr: #0a1825ba;
+  --darkStaleBlue: #080816;
+  --darkStaleBlueTr: #080816ba;
   --gradient: linear-gradient(45deg, var(--accentBlue) 0%, var(--accentPink) 100%);
 }
 
@@ -54,10 +55,6 @@ body {
   min-height: 100vh;
   background: var(--darkViolet);
   font-size: calc(var(--index) * .7);
-}
-
-#tsparticles {
-  /* height: 100vh; */
 }
 
 .accent_pink {
