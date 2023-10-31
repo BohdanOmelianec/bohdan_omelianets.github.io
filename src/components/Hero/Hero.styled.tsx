@@ -1,10 +1,9 @@
 import styled, { keyframes } from "styled-components";
 import { Button } from "components/ui/Button";
-import heroImg from "images/heroImg.png";
+import { Container } from "components/Container/Container.styled";
 
-export const HeroWrapper = styled.section`
+export const HeroWrapper = styled(Container)`
   height: calc(100vh - var(--appBarHeight));
-  padding: 16px 32px;
   display: grid;
   grid-template-columns: min-content auto;
   align-items: center;
@@ -67,6 +66,7 @@ export const DownloadButton = styled(Button)`
   background-color: var(--darkViolet);
   width: 150px;
   transition: all .5s;
+  color: var(--textColor);
 
   &:hover {
     background-color: transparent;
@@ -105,7 +105,7 @@ const floatingShape = keyframes`
 `;
 
 export const Image = styled.div`
-  background-image: url(${heroImg});
+  background-image: url(/images/heroImg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

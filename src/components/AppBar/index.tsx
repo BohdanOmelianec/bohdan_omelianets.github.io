@@ -1,4 +1,3 @@
-// import { TABS } from "components/Tabs/Tabs";
 import { AppBarStyled, Logo, List, ListItem } from "./AppBar.styled";
 
 const NavLinks = [
@@ -21,17 +20,12 @@ type Props = {
   setActiveTab: (i: number) => void;
 };
 
-
 const AppBar = ({ activeTab, setActiveTab }: Props) => {
   const onTabClick = (index: number) => setActiveTab(index);
   
   return (
     <AppBarStyled>
-      <Logo>
-        <span className="accent_pink">{'< '}</span>
-        Bohdan Omelianets
-        <span className="accent_pink">{' />'}</span>
-      </Logo>
+      <Logo asElement="h1" textContent="Bohdan Omelianets" />
       <List>
         {NavLinks.map((link, index) => (
           <ListItem

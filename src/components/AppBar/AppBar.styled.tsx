@@ -1,3 +1,4 @@
+import CodeTitle from "components/ui/CodeTitle";
 import styled, { keyframes } from "styled-components";
 
 
@@ -9,6 +10,8 @@ export const AppBarStyled = styled.nav`
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  z-index: 10;
+  background: var(--darkVioletTr);
 `;
 
 const slideInLogo = keyframes`
@@ -18,14 +21,10 @@ const slideInLogo = keyframes`
   }
 `;
 
-export const Logo = styled.div`
-  opacity: 1;
-  color: var(--textColor);
+export const Logo = styled(CodeTitle)`
+  margin: 0;
   font-size: calc(var(--index) * 1.2);
-  cursor: pointer;
-  user-select: none;
-  white-space: nowrap;
-
+  
   & {
     animation: ${slideInLogo} 1.5s backwards;
   }

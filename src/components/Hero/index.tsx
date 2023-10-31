@@ -9,10 +9,9 @@ import {
   Image,
 } from "./Hero.styled";
 
-
 const Hero = () => {
   return (
-    <HeroWrapper>
+    <HeroWrapper as="section">
       <HeroContent>
         <HeroTitle>Hi, I am Bohdan,</HeroTitle>
         <TypeAnimation
@@ -32,7 +31,7 @@ const Hero = () => {
         <ButtonWrapper>
           <DownloadButton
             as="a"
-            href={""}
+            href={"/Bohdan_Omelianets-Front_end_developer.pdf"}
             title="Download Bohdan_Omelianets-FE_Developer-CV.pdf"
             download={"Bohdan_Omelianets-FE_Developer-CV.pdf"}
           >

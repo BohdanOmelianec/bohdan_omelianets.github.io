@@ -8,8 +8,14 @@ export const MainContainer = styled.div`
   overflow: hidden;
 `;
 
-export const ContentContainer = styled.main`
+export const Main = styled.main`
   width: min(100%, 1440px);
   padding-top: var(--appBarHeight);
+  margin-inline: auto;
+`;
+
+export const Container = styled.div`
+  width: min(100%, 1440px);
+  padding: 16px 32px;
   margin-inline: auto;
 `;
