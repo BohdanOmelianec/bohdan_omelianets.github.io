@@ -6,52 +6,7 @@ import CodeTitle from "components/ui/CodeTitle";
 // } from "./SkillSet.styled";
 import { Container } from "components/Container/Container.styled";
 
-const Tools = [
-  {
-    title: "HTML",
-    src: "/images/tools/html.png",
-  },
-  {
-    title: "CSS",
-    src: "/images/tools/css.png",
-  },
-  {
-    title: "JavaScript",
-    src: "/images/tools/js.png",
-  },
-  {
-    title: "TypeScript",
-    src: "/images/tools/ts.png",
-  },
-  {
-    title: "React",
-    src: "/images/tools/react.png",
-  },
-  {
-    title: "NextJS",
-    src: "/images/tools/nextjs.png",
-  },
-  {
-    title: "Git",
-    src: "/images/tools/git.png",
-  },
-  {
-    title: "MaterialUI",
-    src: "/images/tools/materialui.png",
-  },
-  {
-    title: "VS Code",
-    src: "/images/tools/vscode.png",
-  },
-  {
-    title: "Figma",
-    src: "/images/tools/figma.png",
-  },
-  {
-    title: "Jira",
-    src: "/images/tools/jira.png",
-  },
-];
+
 
 const List = styled.ul`
   display: grid;
@@ -99,14 +54,19 @@ const Image = styled.img`
   object-fit: contain;
 `;
 
-
-const SkillSet = () => {
+type Props = {
+  tools: {
+    title: string,
+    src: string
+  }[]
+};
+const SkillSet = ({ tools }: Props) => {
   return (
     <Container as="section">
       <CodeTitle textContent="Skill Set" />
-      <List>
-        {Tools.map(tool => (
-          <ListItem>
+      <List role="list">
+        {tools.map((tool, index) => (
+          <ListItem key={index} role="listitem">
             <ListTitle>{tool.title}</ListTitle>
             <ImageContainer>
               <Image src={tool.src} alt={tool.title} />

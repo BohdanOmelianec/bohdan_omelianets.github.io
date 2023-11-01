@@ -21,17 +21,17 @@ type Props = {
 };
 
 const AppBar = ({ activeTab, setActiveTab }: Props) => {
-  const onTabClick = (index: number) => setActiveTab(index);
   
   return (
     <AppBarStyled>
       <Logo asElement="h1" textContent="Bohdan Omelianets" />
-      <List>
+      <List role="navigation">
         {NavLinks.map((link, index) => (
           <ListItem
+            role="navigation-link"
             key={link.id}
             className={`${activeTab === index ? "active" : ""} list_animation`}
-            onClick={() => onTabClick(index)}
+            onClick={() => setActiveTab(index)}
           >
             {link.title}
           </ListItem>
