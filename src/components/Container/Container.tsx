@@ -13,6 +13,16 @@ import { TOOLS } from 'constants/constants';
 let scrolling = 0;
 let scrollFlag = 1;
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add("show")
+    }
+  })
+}, {
+  threshold: 1,
+})
+
 const Container = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
@@ -40,17 +50,27 @@ const Container = () => {
             }
           };
           scrollFlag = 1;
-        }, 200);
+        }, 100);
 
         scrollFlag = 0;
       }
     });
+
+    const elements = document.querySelectorAll(".title")!;
+    elements.forEach(element => observer.observe(element))
   }, []);
 
   useEffect(() => {
     scrolling = activeTab * -100;
     translateYMain(scrolling);
-  }, [activeTab])
+  }, [activeTab]);
+
+  
+  
+
+    useEffect(() => {
+
+    });
 
 
 

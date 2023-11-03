@@ -1,10 +1,10 @@
 
 import styled from "styled-components";
-import CodeTitle from "components/ui/CodeTitle";
 // import {
   
 // } from "./SkillSet.styled";
 import { Container } from "components/Container/Container.styled";
+import { SectionTitle } from "components/ui/SectionTitle";
 
 
 
@@ -64,7 +64,9 @@ type Props = {
 const SkillSet = ({ tools }: Props) => {
   return (
     <Container as="section">
-      <CodeTitle textContent="Skill Set" />
+      <SectionTitle className="title">
+        Skill Set
+      </SectionTitle>
       <List role="list">
         {tools.map((tool, index) => (
           <ListItem key={index} role="listitem">

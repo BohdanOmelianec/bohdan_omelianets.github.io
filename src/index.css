@@ -22,7 +22,7 @@
   --darkVioletTr: #09010eba;
   --darkStaleBlue: #12122f;
   --darkStaleBlueTr: #12122fba;
-  --gradient: linear-gradient(45deg, var(--accentBlue) 0%, var(--accentPink) 100%);
+  --gradient: linear-gradient(90deg, var(--accentBlue) 0%, var(--accentPink) 100%);
   --bgGradient: radial-gradient(circle, #240442 0%, #09010e 100%);
 }
 

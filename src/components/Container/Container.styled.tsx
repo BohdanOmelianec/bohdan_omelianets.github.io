@@ -12,7 +12,7 @@ export const Main = styled.main`
   width: min(100%, 1440px);
   height: 100vh;
   margin-inline: auto;
-  transition: transform .9s ease-out;
+  transition: transform .5s ease-out;
 `;
 
 export const Container = styled.div`

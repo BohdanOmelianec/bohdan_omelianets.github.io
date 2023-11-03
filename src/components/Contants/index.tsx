@@ -5,12 +5,15 @@ import CodeTitle from "components/ui/CodeTitle";
   
 // } from "./About.styled";
 import { Container } from "components/Container/Container.styled";
+import { SectionTitle } from "components/ui/SectionTitle";
 
 
 const Contacts = () => {
   return (
     <Container as="section">
-      <CodeTitle textContent="Contacts" />
+      <SectionTitle className="title">
+        Contacts
+      </SectionTitle>
       
     </Container>
   );
