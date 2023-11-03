@@ -10,7 +10,7 @@ import { Container } from "components/Container/Container.styled";
 const AboutMe = () => {
   return (
     <Container as="section">
-      <CodeTitle asElement="div" textContent="About Me" />
+      <CodeTitle textContent="About" />
       
     </Container>
   );

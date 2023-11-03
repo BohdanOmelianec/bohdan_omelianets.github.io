@@ -3,14 +3,22 @@ import { AppBarStyled, Logo, List, ListItem } from "./AppBar.styled";
 const NavLinks = [
   {
     id: 1,
-    title: "ABOUT ME",
+    title: "HOME",
   },
   {
     id: 2,
-    title: "EXPERIENCE",
+    title: "ABOUT",
   },
   {
     id: 3,
+    title: "EXPERIENCE",
+  },
+  {
+    id: 4,
+    title: "SKILL SET",
+  },
+  {
+    id: 5,
     title: "CONTACTS",
   },
 ];

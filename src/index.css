@@ -17,11 +17,13 @@
   --accentBlue: #2d94f0;
   --accentBlueTr: #2d94f0ba;
   --accentPink: #f071ea;
+  --lightViolet: #240442;
   --darkViolet: #09010e;
   --darkVioletTr: #09010eba;
   --darkStaleBlue: #12122f;
   --darkStaleBlueTr: #12122fba;
   --gradient: linear-gradient(45deg, var(--accentBlue) 0%, var(--accentPink) 100%);
+  --bgGradient: radial-gradient(circle, #240442 0%, #09010e 100%);
 }
 
 @font-face {
@@ -52,7 +54,8 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background: var(--darkViolet);
+  /* background: var(--darkViolet); */
+  background: var(--bgGradient) fixed;
   font-family: GabaritoRegular;
   font-size: calc(var(--index) * .7);
   color: var(--textColor);

@@ -3,7 +3,6 @@ import { Button } from "components/ui/Button";
 import { Container } from "components/Container/Container.styled";
 
 export const HeroWrapper = styled(Container)`
-  height: calc(100vh - var(--appBarHeight));
   display: grid;
   grid-template-columns: min-content auto;
   align-items: center;

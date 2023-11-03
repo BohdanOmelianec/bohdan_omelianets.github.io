@@ -11,6 +11,7 @@ type Props = {
 export const Title = styled.h2`
   opacity: 1;
   font-size: calc(var(--index) * 1.7);
+  letter-spacing: 3px;
   cursor: pointer;
   user-select: none;
   white-space: nowrap;

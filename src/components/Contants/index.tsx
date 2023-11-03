@@ -3,17 +3,17 @@ import styled from "styled-components";
 import CodeTitle from "components/ui/CodeTitle";
 // import {
   
-// } from "./Experience.styled";
+// } from "./About.styled";
 import { Container } from "components/Container/Container.styled";
 
 
-const Experience = () => {
+const Contacts = () => {
   return (
     <Container as="section">
-      <CodeTitle textContent="Experience" />
+      <CodeTitle textContent="Contacts" />
       
     </Container>
   );
 };
 
-export default Experience;
+export default Contacts;

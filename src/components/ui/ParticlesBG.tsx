@@ -7,7 +7,7 @@ import { loadSlim } from "tsparticles-slim";
 const options: ISourceOptions = {
   background: {
     color: {
-      value: "#09010e",
+      value: "transparent",
     },
   },
   fpsLimit: 60,

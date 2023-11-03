@@ -23,14 +23,14 @@ const ListItem = styled.li`
   padding: 16px;
   background: var(--darkStaleBlueTr);
   border-radius: 30px;
-  transition: all .8s; 
-  box-shadow:       0 0 20px -10px var(--accentBlue);
+  transition: all .7s ease-out; 
+  // box-shadow: 0 0 20px -10px var(--accentBlue);
 
   &:hover {
-    box-shadow:
-      0 0 40px -15px var(--accentBlue),
-      0 0 50px -25px var(--accentPink);
-    // border-radius: 50px;
+    & img {
+    };
+    transform: scale(1.07);
+    background: var(--darkStaleBlue);
 `;
 
 const ListTitle = styled.h3`
@@ -52,6 +52,7 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
+  user-select: none;
 `;
 
 type Props = {

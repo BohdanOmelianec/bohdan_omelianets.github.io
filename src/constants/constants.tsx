@@ -29,6 +29,10 @@ export const TOOLS = [
     src: "/images/tools/react.png",
   },
   {
+    title: "Redux",
+    src: "/images/tools/redux.png",
+  },
+  {
     title: "NextJS",
     src: "/images/tools/nextjs.png",
   },

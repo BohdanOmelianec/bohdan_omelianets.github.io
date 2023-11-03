@@ -10,12 +10,14 @@ export const MainContainer = styled.div`
 
 export const Main = styled.main`
   width: min(100%, 1440px);
-  padding-top: var(--appBarHeight);
+  height: 100vh;
   margin-inline: auto;
+  transition: transform .9s ease-out;
 `;
 
 export const Container = styled.div`
   width: min(100%, 1440px);
-  padding: 16px 32px;
+  height: 100vh;
+  padding: calc(32px + var(--appBarHeight)) 32px 32px;
   margin-inline: auto;
 `;
