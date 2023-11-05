@@ -18,6 +18,10 @@ export const Main = styled.main`
 export const Container = styled.div`
   width: min(100%, 1440px);
   height: 100vh;
-  padding: calc(32px + var(--appBarHeight)) 32px 32px;
+  padding: calc(16px + var(--appBarHeight)) 16px 16px;
   margin-inline: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 `;

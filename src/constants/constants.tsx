@@ -14,7 +14,7 @@ export const TOOLS = [
   },
   {
     title: "CSS",
-    src: "/images/tools/css.png",
+    src: "/images/tools/css1.png",
   },
   {
     title: "JavaScript",

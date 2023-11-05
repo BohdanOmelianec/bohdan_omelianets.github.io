@@ -17,13 +17,16 @@
   --accentBlue: #2d94f0;
   --accentBlueTr: #2d94f0ba;
   --accentPink: #f071ea;
-  --lightViolet: #240442;
-  --darkViolet: #09010e;
-  --darkVioletTr: #09010eba;
+  /* --lightViolet: #240442; */
+  /* --darkViolet: #09010e; */
+  --lightViolet: #272c35;
+  --darkViolet: #000000;
+  /* --darkVioletTr: #09010eba; */
+  --darkVioletTr: #000000ba;
   --darkStaleBlue: #12122f;
   --darkStaleBlueTr: #12122fba;
   --gradient: linear-gradient(90deg, var(--accentBlue) 0%, var(--accentPink) 100%);
-  --bgGradient: radial-gradient(circle, #240442 0%, #09010e 100%);
+  --bgGradient: radial-gradient(circle, var(--lightViolet) 0%, var(--darkViolet) 80%);
 }
 
 @font-face {
