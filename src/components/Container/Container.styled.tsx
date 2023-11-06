@@ -17,17 +17,15 @@ export const Main = styled.main`
 
 export const Container = styled.div`
   width: min(100%, 1440px);
-  min-height: 100vh;
   height: 100%;
-  padding: calc(16px + var(--appBarHeight)) 16px 16px;
+  padding: calc(1rem + var(--appBarHeight)) 1rem 1rem;
   margin-inline: auto;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 3rem;
 
   @media(max-width: 768px) {
-    // height: 100%;
-    gap: 16px;
+    gap: 2rem;
   }
 `;

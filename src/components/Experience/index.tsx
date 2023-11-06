@@ -16,42 +16,72 @@ const Experience = () => {
         <DivRoad>
           <ul>
             <ListItem>
-              {/* <div> */}
-                <span className="period">September 09 - June 13</span>
-                <span className="position">National University Lviv Polytechnic</span>
-                <div className="short_text">Bachelor degree, Electrical system ant networks</div>
-              {/* </div> */}
+              <span className="period">September 09 - June 13</span>
+              <span className="position">
+                National University Lviv Polytechnic
+              </span>
+              <span className="additional_text">
+                Bachelor degree, Electrical system ant networks
+              </span>
             </ListItem>
             <ListItem>
-              {/* <div> */}
-                <span className="period">September 21 - November 21</span>
-                <span className="position">Frontend developer at Inforce</span>
-                <div className="short_text"></div>
-              {/* </div> */}
+              <span className="period">June 21 - August 21</span>
+              <span className="position">Cursor Education</span>
+              <span className="additional_text">Frontend Advanced</span>
             </ListItem>
             <ListItem>
-              {/* <div> */}
-                <span className="period">November 21 - Until now</span>
-                <span className="position">Frontend developer at Levi9</span>
-                <div className="short_text"></div>
-              {/* </div> */}
+              <span className="period">September 21 - November 21</span>
+              <span className="position">Frontend developer at Inforce</span>
             </ListItem>
             <ListItem>
-              {/* <div> */}
-                <div className="Position">Your company might be here</div>
-              {/* </div> */}
+              <span className="period">November 21 - Until now</span>
+              <span className="position">Frontend developer at Levi9</span>
+            </ListItem>
+            <ListItem>
+              <span className="position">Your company might be here</span>
             </ListItem>
           </ul>
         </DivRoad>
         <DivProjects>
+          <h3>Projects I participated in</h3>
           <ProjectCard>
-            <div>Quastionnare</div>
+            <h4>Questionnare</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
+              asperiores maxime facere dolores inventore eius? Alias officia ex
+              delectus sed eum, adipisci nihil error beatae.
+            </p>
           </ProjectCard>
           <ProjectCard>
-            <div>Responsible Ukrainians</div>
+            <h4>
+              <a
+                href="https://www.reukr.in.ua/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Responsible Ukrainians
+              </a>
+            </h4>
+            <p>
+              The web project for a charity foundation located in Rivne. The
+              primary objective was to establish a user-friendly platform that
+              facilitates the collection of donations for the essential needs of
+              the Ukrainian army. This platform was designed to be easily
+              manageable through a Content Management System. My piece of work
+              involved creating a layout from scratch acording to a design.
+              Additionally, I was tasked with developing the core features of
+              the platform using React and NextJS and implementing security
+              measures through the integration of Auth0, ensuring that the admin
+              panel remained protected and secure. secured admin panel.
+            </p>
           </ProjectCard>
           <ProjectCard>
-            <div>OfficeMap</div>
+            <h4>OfficeMap</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
+              asperiores maxime facere dolores inventore eius? Alias officia ex
+              delectus sed eum, adipisci nihil error beatae.
+            </p>
           </ProjectCard>
         </DivProjects>
       </ContainerWrapper>
