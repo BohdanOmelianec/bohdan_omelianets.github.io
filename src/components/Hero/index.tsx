@@ -11,7 +11,7 @@ const Hero = () => {
     <HeroWrapper as="section">
       <ContentBlock />
       <HeroImage>
-        <Image src={photo} />
+        <Image src={photo} alt="Bohdan photo" />
       </HeroImage>
     </HeroWrapper>
   );

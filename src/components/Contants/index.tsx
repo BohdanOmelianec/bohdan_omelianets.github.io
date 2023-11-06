@@ -7,7 +7,7 @@ import bg from "assets/images/contacts_bg.jpg";
 const Contacts = () => {
   return (
     <Container as="section">
-      <ImageBackground src={bg} />
+      <ImageBackground src={bg} alt="Background image with two hands touching" />
       <SectionTitle className="title">Let's keep in touch</SectionTitle>
       <Content>
         <Paragraph>
