@@ -1,15 +1,15 @@
-import html from "assets/images/tools/html.png";
-import css from "assets/images/tools/css1.png";
-import js from "assets/images/tools/js.png";
-import ts from "assets/images/tools/ts.png";
-import react from "assets/images/tools/react.png";
-import redux from "assets/images/tools/redux.png";
-import nextjs from "assets/images/tools/nextjs.png";
-import git from "assets/images/tools/git.png";
-import materialui from "assets/images/tools/materialui.png";
-import vscode from "assets/images/tools/vscode.png";
-import figma from "assets/images/tools/figma.png";
-import jira from "assets/images/tools/jira.png";
+import html from "assets/images/tools/sm/html.png";
+import css from "assets/images/tools/sm/css.png";
+import js from "assets/images/tools/sm/js.png";
+import ts from "assets/images/tools/sm/ts.png";
+import react from "assets/images/tools/sm/react.png";
+import redux from "assets/images/tools/sm/redux.png";
+import nextjs from "assets/images/tools/sm/nextjs.png";
+import git from "assets/images/tools/sm/git.png";
+import materialui from "assets/images/tools/sm/materialui.png";
+import vscode from "assets/images/tools/sm/vscode.png";
+import figma from "assets/images/tools/sm/figma.png";
+import jira from "assets/images/tools/sm/jira.png";
 
 export const COLORS = {
   textColor: "#d3d3d3",

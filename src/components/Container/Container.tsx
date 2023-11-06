@@ -34,27 +34,27 @@ const Container = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("wheel", event => {
-      if(scrollFlag === 1){
-        setTimeout(() => {
-          const main = document.getElementById("main")!;
-          if (event.deltaY < 0 && scrolling !== 0) {
-            scrolling += 100;
-            translateYMain(scrolling);
-            setActiveTab(prev => prev - 1);
-          } else if (event.deltaY > 0) {
-            if (scrolling > -( (main.children.length - 1) * 100 ) ) {
-              scrolling -= 100;
-              translateYMain(scrolling);
-              setActiveTab(prev => prev + 1);
-            }
-          };
-          scrollFlag = 1;
-        }, 100);
+    // window.addEventListener("wheel", event => {
+    //   if(scrollFlag === 1){
+    //     setTimeout(() => {
+    //       const main = document.getElementById("main")!;
+    //       if (event.deltaY < 0 && scrolling !== 0) {
+    //         scrolling += 100;
+    //         translateYMain(scrolling);
+    //         setActiveTab(prev => prev - 1);
+    //       } else if (event.deltaY > 0) {
+    //         if (scrolling > -( (main.children.length - 1) * 100 ) ) {
+    //           scrolling -= 100;
+    //           translateYMain(scrolling);
+    //           setActiveTab(prev => prev + 1);
+    //         }
+    //       };
+    //       scrollFlag = 1;
+    //     }, 100);
 
-        scrollFlag = 0;
-      }
-    });
+    //     scrollFlag = 0;
+    //   }
+    // });
 
     const elements = document.querySelectorAll(".title")!;
     elements.forEach(element => observer.observe(element))

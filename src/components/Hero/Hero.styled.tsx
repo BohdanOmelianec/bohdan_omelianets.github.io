@@ -4,7 +4,7 @@ import { Container } from "components/Container/Container.styled";
 
 export const HeroWrapper = styled(Container)`
   display: grid;
-  grid-template-columns: min-content auto;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
 
@@ -24,7 +24,7 @@ const heroContentSlide = keyframes`
   }
 `;
 
-export const HeroContent = styled.div`
+export const DivStyled = styled.div`
   width: min-content;
   background: var(--glacier);
   backdrop-filter: blur(5px);
@@ -35,7 +35,6 @@ export const HeroContent = styled.div`
   & h2,
   & h3 {
     font-size: 3rem;
-    font-family: 'GabaritoSemiBold';
     white-space: nowrap;
   }
 `;
@@ -119,17 +118,3 @@ export const Image = styled.img`
   animation: ${floatingShape} 6s linear infinite;
 
 `;
-// export const Image = styled.div`
-//   background-image: url(/images/heroImg.png);
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center;
-//   // width: 80%;
-//   aspect-ratio: 1/1;
-//   height: 100%;
-//   margin-inline: auto;
-//   box-shadow: 0 0 75px -25px var(--accentBlueTr);
-//   will-change: border-radius, transform;
-//   animation: ${floatingShape} 6s linear infinite;
-
-// `;

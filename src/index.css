@@ -34,27 +34,27 @@
 
 @font-face {
   font-family: 'GabaritoRegular';
-  src: url('fonts/Gabarito-Regular.ttf') format('truetype')
+  src: url('assets/fonts/Gabarito-Regular.ttf') format('truetype')
 }
 @font-face {
   font-family: 'GabaritoMedium';
-  src: url('fonts/Gabarito-Medium.ttf') format('truetype');
+  src: url('assets/fonts/Gabarito-Medium.ttf') format('truetype');
 }
 @font-face {
   font-family: 'GabaritoSemiBold';
-  src: url('fonts/Gabarito-SemiBold.ttf') format('truetype');
+  src: url('assets/fonts/Gabarito-SemiBold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'GabaritoBold';
-  src: url('fonts/Gabarito-Bold.ttf') format('truetype');
+  src: url('assets/fonts/Gabarito-Bold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'GabaritoExtraBold';
-  src: url('fonts/Gabarito-ExtraBold.ttf') format('truetype');
+  src: url('assets/fonts/Gabarito-ExtraBold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'GabaritoBlack';
-  src: url('fonts/Gabarito-Black.ttf') format('truetype');
+  src: url('assets/fonts/Gabarito-Black.ttf') format('truetype');
 }
 html {
   font-size: 16px;
@@ -63,9 +63,14 @@ body {
   width: 100%;
   min-height: 100vh;
   background: var(--bgGradient) fixed;
-  font-family: GabaritoRegular;
+  font-family: GabaritoRegular, Helvetica, Tahoma, Geneva, sans-serif;
   font-size: 1rem;
   color: var(--textColor);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: GabaritoBold, Helvetica, Tahoma, Geneva, sans-serif;
+  /* font-weight: 400; */
 }
 
 @media screen and (max-width: 768px) {
