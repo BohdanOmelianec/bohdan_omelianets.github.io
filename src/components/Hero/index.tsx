@@ -8,7 +8,7 @@ import {
   HeroImage,
   Image,
 } from "./Hero.styled";
-import photo from "assets/images/heroImg.png"
+import photo from "assets/images/heroImg.png";
 
 const Hero = () => {
   return (
@@ -32,7 +32,7 @@ const Hero = () => {
         <ButtonWrapper>
           <DownloadButton
             as="a"
-            href={"assets/Bohdan_Omelianets-Front_end_developer.pdf"}
+            href={"/Bohdan_Omelianets-Front_end_developer.pdf"}
             title="Download Bohdan_Omelianets-FE_Developer-CV.pdf"
             download={"Bohdan_Omelianets-FE_Developer-CV.pdf"}
           >
