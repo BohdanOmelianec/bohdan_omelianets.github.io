@@ -15,19 +15,21 @@
   --appBarHeight: 60px;
 
   --textColor: #d6d6d6;
+  --textGray: #9d9d9d;
   --accentBlue: #2d94f0;
   --accentBlueTr: #2d94f0ba;
   --accentPink: #f071ea;
   /* --lightViolet: #240442; */
   /* --darkViolet: #09010e; */
-  --lightViolet: #272c35;
-  --darkViolet: #000000;
+  --lightGray: #272c35;
+  --darkGray: #000000;
   /* --darkVioletTr: #09010eba; */
   --darkVioletTr: #000000ba;
   --darkStaleBlue: #12122f;
   --darkStaleBlueTr: #12122fba;
+  --glacier: #3b48573b;
   --gradient: linear-gradient(90deg, var(--accentBlue) 0%, var(--accentPink) 100%);
-  --bgGradient: radial-gradient(circle, var(--lightViolet) 0%, var(--darkViolet) 80%);
+  --bgGradient: radial-gradient(circle, var(--lightGray) 0%, var(--darkGray) 80%);
 }
 
 @font-face {
@@ -54,13 +56,20 @@
   font-family: 'GabaritoBlack';
   src: url('fonts/Gabarito-Black.ttf') format('truetype');
 }
-
+html {
+  font-size: 16px;
+}
 body {
   width: 100%;
   min-height: 100vh;
-  /* background: var(--darkViolet); */
   background: var(--bgGradient) fixed;
   font-family: GabaritoRegular;
-  font-size: calc(var(--index) * .7);
+  font-size: 1rem;
   color: var(--textColor);
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
 }

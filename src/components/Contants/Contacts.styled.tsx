@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ImageBackground = styled.img`
   position: absolute;
-  // inset: 0;
   top: 20%;
   width: 100%;
   height: 100%;
@@ -25,47 +24,59 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 32px;
+  gap: 2rem;
+
+  @media(max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
 `;
 
 export const Paragraph = styled.p`
-  width: clamp(300px, 100%, 400px);
-  letter-spacing: 2px;
-  font-size: 24px;
-  padding: 16px;
+  width: clamp(300px, 100%, 500px);
+  letter-spacing: .125rem;
+  font-size: 1.25rem;
+  padding: 1rem;
+
 `;
 
 export const DivStyled = styled.div`
   width: clamp(300px, 100%, 400px);
-  background: var(--darkStaleBlueTr);
-  border-radius: 20px;
-  font-size: 18px;
-  padding: 16px;
+  background: var(--glacier);
+  backdrop-filter: blur(5px);
+  border-radius: 1.25rem;
+  font-size: 1.125rem;
+  padding: 1rem;
 `;
 
 export const ContactItem = styled.div`
-  padding: 16px;
+  padding: 1rem;
 
   &.flex {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 1rem;
+  }
+
+  @media(max-width: 768px) {
+    padding: .5rem;
   }
 `;
 
 export const ContactTitle = styled.span`
   display: block;
   font-family: GabaritoMedium;
-  margin-bottom: 8px;
+  margin-bottom: .5rem;
 `;
 
 export const ContactText = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: .5rem;
 
-  font-size: 16px;
+  font-size: 1rem;
   font-family: GabaritoRegular;
   color: #9d9d9d;
 
@@ -78,8 +89,8 @@ export const ContactText = styled.div`
 
 export const SvgIcon = styled.span`
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 2rem;
+  height: 2rem;
 
   & svg {
     transition: all 0.4s;

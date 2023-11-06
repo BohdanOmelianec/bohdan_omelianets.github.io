@@ -23,7 +23,7 @@ const slideInLogo = keyframes`
 
 export const Logo = styled(CodeTitle)`
   margin: 0;
-  font-size: calc(var(--index) * 1.2);
+  font-size: 1.25rem;
   
   & {
     animation: ${slideInLogo} 1.5s backwards;
@@ -32,7 +32,7 @@ export const Logo = styled(CodeTitle)`
 
 export const List = styled.ul`
   display: flex;
-  gap: 12px;
+  gap: .5rem;
 `;
 
 const slideIn = keyframes`
@@ -45,12 +45,12 @@ const slideIn = keyframes`
 const border = `2px solid var(--accentPink)`
 export const ListItem = styled.li`
   padding: 6px 12px;
-  font-size: calc(var(--index) * .8);
+  font-size: 1rem;
   cursor: pointer;
   position: relative;
   user-select: none;
   white-space: nowrap;
-  color: #9d9d9d;
+  color: var(--textGray);
   transition: color .4s;
 
   &:before, &:after {
@@ -70,16 +70,16 @@ export const ListItem = styled.li`
   &.active {
     color: var(--textColor);
     &:before {
-      width: 12px;
-      height: 12px;
+      width: .75rem;
+      height: .75rem;
       border-bottom: ${border};
       border-left: ${border};
       bottom: 0;
       left: 0;
     }
     &:after {
-      width: 12px;
-      height: 12px;
+      width: .75rem;
+      height: .75rem;
       border-right: ${border};
       border-top: ${border};
       top: 0;

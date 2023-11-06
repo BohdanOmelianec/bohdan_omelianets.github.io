@@ -13,6 +13,10 @@ export const Main = styled.main`
   height: 100vh;
   margin-inline: auto;
   transition: transform .5s ease-out;
+
+  // @media(max-width: 768px) {
+  //   height: 100%;
+  // }
 `;
 
 export const Container = styled.div`
@@ -24,4 +28,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  @media(max-width: 768px) {
+    // height: 100%;
+    gap: 16px;
+  }
 `;

@@ -6,13 +6,14 @@ export const HeroWrapper = styled(Container)`
   display: grid;
   grid-template-columns: min-content auto;
   align-items: center;
+  justify-items: center;
 
   @media(max-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 32px;
+    justify-content: flex-end;
+    gap: 2rem;
   }
 `;
 
@@ -24,24 +25,18 @@ const heroContentSlide = keyframes`
 `;
 
 export const HeroContent = styled.div`
-  width: 100%;
-  background: var(--darkStaleBlueTr);
-  border-radius: 20px;
-  padding: 16px;
+  width: min-content;
+  background: var(--glacier);
+  backdrop-filter: blur(5px);
+  border-radius: 1.25rem;
+  padding: 1rem;
   animation: ${heroContentSlide} 1.2s ease-out;
 
   & h2,
   & h3 {
-    font-size: calc(var(--index) * 3);
+    font-size: 3rem;
     font-family: 'GabaritoSemiBold';
     white-space: nowrap;
-  }
-
-  @media(max-width: 768px) {
-    & h2,
-    & h3 {
-      font-size: calc(var(--index) * 2.2);
-    }
   }
 `;
 
@@ -57,13 +52,14 @@ export const ButtonWrapper = styled.div`
   background: var(--gradient);
   padding: 2px;
   border-radius: 11px;
-  margin-top: 32px;
+  margin-top: 2rem;
 `;
 
 export const DownloadButton = styled(Button)`
   display: block;
-  background-color: var(--darkViolet);
+  background-color: var(--darkGray);
   width: 150px;
+  text-align: center;
   transition: all .5s;
   color: var(--textColor);
 
@@ -82,7 +78,15 @@ const growImage = keyframes`
 
 export const HeroImage = styled.div`
   width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 400px;
+  max-height: 400px;
   animation: ${growImage} 1s linear;
+  
+  @media(max-width: 768px) {
+    max-width: 300px;
+    max-height: 300px;
+  }
 `;
 
 const floatingShape = keyframes`
@@ -103,19 +107,29 @@ const floatingShape = keyframes`
   }
 `;
 
-export const Image = styled.div`
-  background-image: url(/images/heroImg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 80%;
-  aspect-ratio: 1/1;
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   margin-inline: auto;
   box-shadow: 0 0 75px -25px var(--accentBlueTr);
   will-change: border-radius, transform;
   animation: ${floatingShape} 6s linear infinite;
 
-  @media(max-width: 768px) {
-    width: 70%;
-  }
 `;
+// export const Image = styled.div`
+//   background-image: url(/images/heroImg.png);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   // width: 80%;
+//   aspect-ratio: 1/1;
+//   height: 100%;
+//   margin-inline: auto;
+//   box-shadow: 0 0 75px -25px var(--accentBlueTr);
+//   will-change: border-radius, transform;
+//   animation: ${floatingShape} 6s linear infinite;
+
+// `;

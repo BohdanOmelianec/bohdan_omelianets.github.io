@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SectionTitle = styled.h2`
   width: fit-content;
-  font-size: calc(var(--index) * 5);
+  font-size: 5rem;
   opacity: 0;
   background: var(--gradient);
   background-clip: text;
@@ -14,9 +14,5 @@ export const SectionTitle = styled.h2`
   &.show {
     opacity: .4;
     transform: translateY(0);
-  }
-
-  @media(max-width: 600px) {
-    font-size: calc(var(--index) * 4);
   }
 `;

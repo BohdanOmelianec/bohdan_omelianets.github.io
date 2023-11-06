@@ -18,12 +18,13 @@ import {
   LocationSVG,
   PhoneSVG,
 } from "./svgs";
+import bg from "assets/images/contacts_bg.jpg";
 
 
 const Contacts = () => {
   return (
     <Container as="section">
-      <ImageBackground src="/images/contacts_bg.jpg" />
+      <ImageBackground src={bg} />
       <SectionTitle className="title">Let's keep in touch</SectionTitle>
       <Content>
         <Paragraph>

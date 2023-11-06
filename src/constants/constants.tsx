@@ -1,3 +1,15 @@
+import html from "assets/images/tools/html.png";
+import css from "assets/images/tools/css1.png";
+import js from "assets/images/tools/js.png";
+import ts from "assets/images/tools/ts.png";
+import react from "assets/images/tools/react.png";
+import redux from "assets/images/tools/redux.png";
+import nextjs from "assets/images/tools/nextjs.png";
+import git from "assets/images/tools/git.png";
+import materialui from "assets/images/tools/materialui.png";
+import vscode from "assets/images/tools/vscode.png";
+import figma from "assets/images/tools/figma.png";
+import jira from "assets/images/tools/jira.png";
 
 export const COLORS = {
   textColor: "#d3d3d3",
@@ -10,50 +22,50 @@ export const COLORS = {
 export const TOOLS = [
   {
     title: "HTML",
-    src: "/images/tools/html.png",
+    src: html,
   },
   {
     title: "CSS",
-    src: "/images/tools/css1.png",
+    src: css,
   },
   {
     title: "JavaScript",
-    src: "/images/tools/js.png",
+    src: js,
   },
   {
     title: "TypeScript",
-    src: "/images/tools/ts.png",
+    src: ts,
   },
   {
     title: "React",
-    src: "/images/tools/react.png",
+    src: react,
   },
   {
     title: "Redux",
-    src: "/images/tools/redux.png",
+    src: redux,
   },
   {
     title: "NextJS",
-    src: "/images/tools/nextjs.png",
+    src: nextjs,
   },
   {
     title: "Git",
-    src: "/images/tools/git.png",
+    src: git,
   },
   {
     title: "MaterialUI",
-    src: "/images/tools/materialui.png",
+    src: materialui,
   },
   {
     title: "VS Code",
-    src: "/images/tools/vscode.png",
+    src: vscode,
   },
   {
     title: "Figma",
-    src: "/images/tools/figma.png",
+    src: figma,
   },
   {
     title: "Jira",
-    src: "/images/tools/jira.png",
+    src: jira,
   },
 ];
