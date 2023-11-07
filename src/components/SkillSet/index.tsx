@@ -3,7 +3,7 @@ import styled from "styled-components";
 // import {
   
 // } from "./SkillSet.styled";
-import { Container } from "components/Container/Container.styled";
+import { Section } from "components/Container/Container.styled";
 import { SectionTitle } from "components/ui/SectionTitle";
 import { useEffect, useState } from "react";
 
@@ -88,7 +88,7 @@ const SkillSet = ({ tools }: Props) => {
   // }, [])
 
   return (
-    <Container as="section">
+    <Section id="skillset">
       <SectionTitle className="title">
         Skill Set
       </SectionTitle>
@@ -105,7 +105,7 @@ const SkillSet = ({ tools }: Props) => {
         <button disabled={slide * 6 + 6 >= tools.length} onClick={() => setSlide(prev => prev + 1)}>{"Next >"}</button>
       </Arrows>
       </List>
-    </Container>
+    </Section>
   );
 };
 

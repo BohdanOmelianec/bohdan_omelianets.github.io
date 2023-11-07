@@ -10,9 +10,14 @@ export const SectionTitle = styled.h2`
   color: transparent;
   transform: translateY(60%);
   transition: all .6s .2s ease-out;
+  margin-bottom: 3rem;
 
   &.show {
     opacity: .4;
     transform: translateY(0);
+  }
+
+  @media(max-width: 768px) {
+    margin-bottom: 2rem;
   }
 `;

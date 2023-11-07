@@ -1,18 +1,18 @@
 import {
-  ContainerWrapper,
+  DivWrapper,
   DivRoad,
   DivProjects,
   ListItem,
   ProjectCard,
 } from "./Experience.styled";
-import { Container } from "components/Container/Container.styled";
+import { Section } from "components/Container/Container.styled";
 import { SectionTitle } from "components/ui/SectionTitle";
 
 const Experience = () => {
   return (
-    <Container as="section">
+    <Section id="experience">
       <SectionTitle className="title">Experience</SectionTitle>
-      <ContainerWrapper>
+      <DivWrapper>
         <DivRoad>
           <ul>
             <ListItem>
@@ -45,47 +45,54 @@ const Experience = () => {
         <DivProjects>
           <h3>Projects I participated in</h3>
           <ProjectCard>
-            <h4>Questionnare</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
-              asperiores maxime facere dolores inventore eius? Alias officia ex
-              delectus sed eum, adipisci nihil error beatae.
+            <h4>Questionnaire</h4>
+            <p className="hidden">
+              An app similar to Google Forms that allows recruiters to create a
+              questionnaire for potential employees who can sign up through an
+              email. The best candidates were selected by filtering based on the
+              best results. The app was rewritten and improved using React and
+              Next JS in collaboration with DevOps Engineer. Additionally, the
+              app had role-based authorization for candidates and recruiters
+              secured by NextAuth.
             </p>
           </ProjectCard>
           <ProjectCard>
-            <h4>
-              <a
+            <h4>Responsible Ukrainians</h4>
+            <p className="hidden">
+              The web project <a
+                style={{color: "var(--accentBlue)"}}
                 href="https://www.reukr.in.ua/"
+                title="Відповідальні Українці"
                 target="_blank"
                 rel="noreferrer"
               >
-                Responsible Ukrainians
-              </a>
-            </h4>
-            <p>
-              The web project for a charity foundation located in Rivne. The
-              primary objective was to establish a user-friendly platform that
-              facilitates the collection of donations for the essential needs of
-              the Ukrainian army. This platform was designed to be easily
-              manageable through a Content Management System. My piece of work
-              involved creating a layout from scratch acording to a design.
-              Additionally, I was tasked with developing the core features of
-              the platform using React and NextJS and implementing security
-              measures through the integration of Auth0, ensuring that the admin
-              panel remained protected and secure. secured admin panel.
+                (www.reukr.in.ua)
+              </a> for a charity foundation located in Rivne. The primary objective
+              was to establish a user-friendly platform that facilitates the
+              collection of donations for the essential needs of the Ukrainian
+              army. This platform was designed to be easily manageable through a
+              Content Management System. My piece of work involved creating a
+              layout from scratch acording to a design. Additionally, I was
+              tasked with developing the core features of the platform using
+              React and NextJS and implementing security measures through the
+              integration of Auth0, ensuring that the admin panel remained
+              protected and secure.
             </p>
           </ProjectCard>
           <ProjectCard>
             <h4>OfficeMap</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
-              asperiores maxime facere dolores inventore eius? Alias officia ex
-              delectus sed eum, adipisci nihil error beatae.
+            <p className="hidden">
+              It is the platform that allows users to effortlessly familiarize
+              themselves with a map of an office. Moreover, it facilitates the
+              seamless discovery of available workplaces or meeting rooms, all
+              of which can be conveniently reserved for a specific date. My
+              responsibility involved enhancing the existing app by fixing known
+              bugs while also making improvements to specific aspects of it.
             </p>
           </ProjectCard>
         </DivProjects>
-      </ContainerWrapper>
-    </Container>
+      </DivWrapper>
+    </Section>
   );
 };
 

@@ -8,7 +8,7 @@ import photo from "assets/images/heroImg.jpg";
 
 const Hero = () => {
   return (
-    <HeroWrapper as="section">
+    <HeroWrapper id="home">
       <ContentBlock />
       <HeroImage>
         <Image src={photo} alt="Bohdan photo" />

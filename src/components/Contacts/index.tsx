@@ -1,12 +1,12 @@
 import { ImageBackground, Content, Paragraph } from "./Contacts.styled";
-import { Container } from "components/Container/Container.styled";
+import { Section } from "components/Container/Container.styled";
 import { SectionTitle } from "components/ui/SectionTitle";
 import ContactsBlock from "./ContactsBlock";
 import bg from "assets/images/contacts_bg.jpg";
 
 const Contacts = () => {
   return (
-    <Container as="section">
+    <Section id="contacts">
       <ImageBackground src={bg} alt="Background image with two hands touching" />
       <SectionTitle className="title">Let's keep in touch</SectionTitle>
       <Content>
@@ -17,7 +17,7 @@ const Contacts = () => {
         </Paragraph>
         <ContactsBlock />
       </Content>
-    </Container>
+    </Section>
   );
 };
 

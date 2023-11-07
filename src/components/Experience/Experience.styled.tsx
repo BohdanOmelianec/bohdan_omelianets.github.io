@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const ContainerWrapper = styled.div`
+export const DivWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-content: center;
-  align-items: center;
+  align-items: start;
   justify-items: center;
   gap: 2rem;
   padding: 1rem;
@@ -19,7 +19,8 @@ export const ContainerWrapper = styled.div`
 `;
 
 export const DivRoad = styled.div`
-
+  position: sticky;
+  top: calc(3rem + var(--appBarHeight));
 `;
 
 export const ListItem = styled.li`
@@ -62,10 +63,10 @@ export const ListItem = styled.li`
 export const DivProjects = styled.div`
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+
+  & > * + * {
+    margin-top: 1.5rem;
+  }
 
   & h3 {
     font-family: GabaritoSemiBold;
@@ -75,18 +76,17 @@ export const DivProjects = styled.div`
 
 export const ProjectCard = styled.div`
   width: clamp(300px, 100%, 400px);
-  // height: 120px;
   background: var(--glacier);
   backdrop-filter: blur(5px);
   border-radius: 1.25rem;
   font-size: 1.125rem;
-  padding: 1rem;
+  padding: 1rem 1rem 2rem;
 
   & h4 {
     font-family: GabaritoSemiBold;
     font-weight: 400;
     color: var(--accentBlue);
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 
     background: var(--gradient);
     background-clip: text;

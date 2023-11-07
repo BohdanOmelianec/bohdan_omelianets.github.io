@@ -6,7 +6,7 @@ import Hero from 'components/Hero';
 import AboutMe from 'components/AboutMe';
 import Experience from 'components/Experience';
 import SkillSet from 'components/SkillSet';
-import Contacts from 'components/Contants';
+import Contacts from 'components/Contacts';
 import { TOOLS } from 'constants/constants';
 
 
@@ -26,12 +26,12 @@ const observer = new IntersectionObserver((entries) => {
 const Container = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
-  const translateYMain = (scrolling: number) => {
-    const main = document.getElementById("main");
-    if (main) {
-      main.style.transform = `translateY(${scrolling}vh)`;
-    }
-  };
+  // const translateYMain = (scrolling: number) => {
+  //   const main = document.getElementById("main");
+  //   if (main) {
+  //     main.style.transform = `translateY(${scrolling}vh)`;
+  //   }
+  // };
 
   useEffect(() => {
     // window.addEventListener("wheel", event => {
@@ -60,10 +60,10 @@ const Container = () => {
     elements.forEach(element => observer.observe(element))
   }, []);
 
-  useEffect(() => {
-    scrolling = activeTab * -100;
-    translateYMain(scrolling);
-  }, [activeTab]);
+  // useEffect(() => {
+  //   scrolling = activeTab * -100;
+  //   translateYMain(scrolling);
+  // }, [activeTab]);
 
   
   

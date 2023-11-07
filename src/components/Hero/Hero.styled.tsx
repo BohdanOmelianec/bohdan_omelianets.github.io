@@ -1,19 +1,20 @@
 import styled, { keyframes } from "styled-components";
 import { Button } from "components/ui/Button";
-import { Container } from "components/Container/Container.styled";
+import { Section } from "components/Container/Container.styled";
 
-export const HeroWrapper = styled(Container)`
+export const HeroWrapper = styled(Section)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
+  min-height: 100vh;
 
   @media(max-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: 3rem;
   }
 `;
 
@@ -78,8 +79,8 @@ const growImage = keyframes`
 export const HeroImage = styled.div`
   width: 100%;
   aspect-ratio: 1/1;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 450px;
+  max-height: 450px;
   animation: ${growImage} 1s linear;
   
   @media(max-width: 768px) {
