@@ -11,7 +11,7 @@ export const AppBarStyled = styled.nav`
   justify-content: space-between;
   position: fixed;
   z-index: 10;
-  background: var(--darkVioletTr);
+  background: var(--blackTransparent);
 `;
 
 const slideInLogo = keyframes`
@@ -33,12 +33,29 @@ export const Logo = styled(CodeTitle)`
 export const List = styled.ul`
   display: flex;
   gap: .5rem;
+
+  @media(max-width: 900px) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    transform: translateY(100%);
+    background: var(--blackTransparent);
+    padding: 2rem 1rem;
+    border-radius: 0 0 0 1.25rem;
+
+    &.show_menu {
+      display: flex;
+    }
+  }
 `;
 
 const slideIn = keyframes`
   from {
     opacity: 0;
-    transform: translateX(150%);
+    transform: translateX(100%);
   }
 `;
 
@@ -90,7 +107,7 @@ export const ListItem = styled.li`
   transform: translateX(0);
 
   & {
-    animation: ${slideIn} 1s backwards;
+    animation: ${slideIn} .7s backwards;
   }
 
   &:nth-child(2) {
@@ -108,10 +125,50 @@ export const ListItem = styled.li`
   &:nth-child(5) {
     animation-delay: .5s;
   }
+
+  @media(max-width: 900px) {
+    margin-inline: auto;
+    &.active {
+      color: var(--accentPink); 
+    }
+    &.active:before, &.active:after {
+       border: none;
+    }
+  }
 `;
 
 export const BurgerMenu = styled.div`
-  width: 30px;
+  height: 100%;
   aspect-ratio: 1/1;
-  border: 1px solid red;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+  @media(max-width: 900px) {
+    display: flex;
+  }
+`;
+
+export const BurgerIcon = styled.div`
+  width: 25px;
+  height: 2px;
+  background: var(--gradient);
+  position: relative;
+  border-radius: 1px;
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient);
+    border-radius: 1px;
+  }
+  &:before {
+    top: -6px;
+  }
+  &:after {
+    bottom: -6px;
+  }
 `;

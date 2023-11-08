@@ -1,4 +1,5 @@
-import { AppBarStyled, Logo, List, ListItem, BurgerMenu } from "./AppBar.styled";
+import { useState } from "react";
+import { AppBarStyled, Logo, List, ListItem, BurgerMenu, BurgerIcon } from "./AppBar.styled";
 
 const NavLinks = [
   {
@@ -29,16 +30,24 @@ type Props = {
 };
 
 const AppBar = ({ activeTab, setActiveTab }: Props) => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const onListItemClick = (index: number) => {
+    setActiveTab(index);
+    if(showMenu) {
+      setShowMenu(false);
+    }
+  }
+
   return (
     <AppBarStyled>
       <Logo asElement="h1" textContent="Bohdan Omelianets" />
-      <List role="navigation">
+      <List className={showMenu ? "show_menu" : ""}>
         {NavLinks.map((link, index) => (
           <ListItem
-            role="navigation-link"
             key={link.id}
             className={`${activeTab === index ? "active" : ""} list_animation`}
-            onClick={() => setActiveTab(index)}
+            onClick={() => onListItemClick(index)}
           >
             <a href={`#${link.elementId}`} title={link.title}>
               {link.title}
@@ -46,7 +55,9 @@ const AppBar = ({ activeTab, setActiveTab }: Props) => {
           </ListItem>
         ))}
       </List>
-      <BurgerMenu />
+      <BurgerMenu onClick={() => setShowMenu(prev => !prev)}>
+        <BurgerIcon />
+      </BurgerMenu>
     </AppBarStyled>
   );
 };
