@@ -109,3 +109,9 @@ export const ListItem = styled.li`
     animation-delay: .5s;
   }
 `;
+
+export const BurgerMenu = styled.div`
+  width: 30px;
+  aspect-ratio: 1/1;
+  border: 1px solid red;
+`;

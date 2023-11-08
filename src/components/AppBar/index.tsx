@@ -1,4 +1,4 @@
-import { AppBarStyled, Logo, List, ListItem } from "./AppBar.styled";
+import { AppBarStyled, Logo, List, ListItem, BurgerMenu } from "./AppBar.styled";
 
 const NavLinks = [
   {
@@ -8,21 +8,16 @@ const NavLinks = [
   },
   {
     id: 2,
-    title: "ABOUT",
-    elementId: "about",
-  },
-  {
-    id: 3,
     title: "EXPERIENCE",
     elementId: "experience",
   },
   {
-    id: 4,
+    id: 3,
     title: "SKILL SET",
     elementId: "skillset",
   },
   {
-    id: 5,
+    id: 4,
     title: "CONTACTS",
     elementId: "contacts",
   },
@@ -51,6 +46,7 @@ const AppBar = ({ activeTab, setActiveTab }: Props) => {
           </ListItem>
         ))}
       </List>
+      <BurgerMenu />
     </AppBarStyled>
   );
 };

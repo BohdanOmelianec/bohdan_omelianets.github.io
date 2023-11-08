@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { Main, MainContainer } from './Container.styled';
 import AppBar from 'components/AppBar';
 import Hero from 'components/Hero';
-import AboutMe from 'components/AboutMe';
 import Experience from 'components/Experience';
 import SkillSet from 'components/SkillSet';
 import Contacts from 'components/Contacts';
@@ -88,7 +87,6 @@ const Container = () => {
       <AppBar activeTab={activeTab} setActiveTab={setActiveTab} />
       <Main id='main'>
         <Hero />
-        {/* <AboutMe /> */}
         <Experience />
         <SkillSet tools={TOOLS} />
         <Contacts />
