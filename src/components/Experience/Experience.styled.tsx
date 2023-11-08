@@ -13,7 +13,7 @@ export const DivWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 4rem;
   }
 `;
@@ -21,6 +21,10 @@ export const DivWrapper = styled.div`
 export const DivRoad = styled.div`
   position: sticky;
   top: calc(3rem + var(--appBarHeight));
+
+  @media(max-width: 768px) {
+    position: initial;
+  }
 `;
 
 export const ListItem = styled.li`
@@ -62,7 +66,7 @@ export const ListItem = styled.li`
 
 export const DivProjects = styled.div`
   height: 100%;
-  width: 100%;
+  max-width: 500px;
 
   & > * + * {
     margin-top: 1.5rem;
@@ -70,23 +74,26 @@ export const DivProjects = styled.div`
 
   & h3 {
     font-family: GabaritoSemiBold;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 `;
 
 export const ProjectCard = styled.div`
-  width: clamp(300px, 100%, 400px);
+  width: clamp(300px, 100%, 500px);
   background: var(--glacier);
   backdrop-filter: blur(5px);
   border-radius: 1.25rem;
   font-size: 1.125rem;
+  line-height: 1.5rem;
   padding: 1rem 1rem 2rem;
 
   & h4 {
     font-family: GabaritoSemiBold;
+    font-size: 1.5rem;
     font-weight: 400;
     color: var(--accentBlue);
     margin-bottom: 1rem;
+
 
     background: var(--gradient);
     background-clip: text;

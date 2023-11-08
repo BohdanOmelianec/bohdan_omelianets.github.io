@@ -13,7 +13,7 @@ export const HeroWrapper = styled(Section)`
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     gap: 3rem;
   }
 `;
@@ -30,7 +30,7 @@ export const DivStyled = styled.div`
   background: var(--glacier);
   backdrop-filter: blur(5px);
   border-radius: 1.25rem;
-  padding: 1rem;
+  padding: 1.5rem;
   animation: ${heroContentSlide} 1.2s ease-out;
 
   & h2,
@@ -52,7 +52,7 @@ export const ButtonWrapper = styled.div`
   background: var(--gradient);
   padding: 2px;
   border-radius: 11px;
-  margin-top: 2rem;
+  margin-top: 3rem;
 `;
 
 export const DownloadButton = styled(Button)`

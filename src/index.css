@@ -14,8 +14,8 @@
 
   --appBarHeight: 60px;
 
-  --textColor: #d6d6d6;
-  --textGray: #9d9d9d;
+  --textColor: #d1d1d1;
+  --textGray: #929292;
   --accentBlue: #2d94f0;
   --accentBlueTr: #2d94f0ba;
   --accentPink: #f071ea;
@@ -74,8 +74,8 @@ h1,h2,h3,h4,h5,h6 {
   font-family: GabaritoBold, Helvetica, Tahoma, Geneva, sans-serif;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   html {
     font-size: 14px;
   }
-}
+} */

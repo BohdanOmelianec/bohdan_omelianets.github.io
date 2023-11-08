@@ -36,7 +36,7 @@ export const Content = styled.div`
 export const Paragraph = styled.p`
   width: clamp(300px, 100%, 500px);
   letter-spacing: .125rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   padding: 1rem;
 
 `;
