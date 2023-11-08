@@ -88,7 +88,7 @@ const Container = () => {
       <AppBar activeTab={activeTab} setActiveTab={setActiveTab} />
       <Main id='main'>
         <Hero />
-        <AboutMe />
+        {/* <AboutMe /> */}
         <Experience />
         <SkillSet tools={TOOLS} />
         <Contacts />

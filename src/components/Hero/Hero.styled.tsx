@@ -2,41 +2,37 @@ import styled, { keyframes } from "styled-components";
 import { Button } from "components/ui/Button";
 import { Section } from "components/Container/Container.styled";
 
-export const HeroWrapper = styled(Section)`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+export const SectionStyled = styled(Section)`
+  display: flex;
   align-items: center;
-  justify-items: center;
-  min-height: 100vh;
+  justify-content: space-evenly;
+  height: 100vh;
+  gap: 3rem;
 
-  @media(max-width: 768px) {
-    display: flex;
+  @media(max-width: 900px) {
     flex-direction: column-reverse;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 3rem;
+    justify-content: space-between;
+    gap: 1rem;
   }
 `;
 
-const heroContentSlide = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-`;
-
-export const DivStyled = styled.div`
+export const DivWrapper = styled.div`
   width: min-content;
-  background: var(--glacier);
-  backdrop-filter: blur(5px);
-  border-radius: 1.25rem;
-  padding: 1.5rem;
-  animation: ${heroContentSlide} 1.2s ease-out;
+  min-width: 500px;
 
   & h2,
   & h3 {
     font-size: 3rem;
     white-space: nowrap;
+  }
+
+  @media(max-width: 768px) {
+    min-width: 400px;
+
+    & h2,
+    & h3 {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -47,45 +43,56 @@ export const HeroTitle = styled.h2`
   display: inline-block;
 `;
 
+const heroContentSlide = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(60%);
+  }
+`;
+
+export const DivText = styled.div`
+  background: var(--glacier);
+  backdrop-filter: blur(5px);
+  border-radius: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  will-change: transform;
+  animation: ${heroContentSlide} 1.2s ease-out;
+
+  @media(max-width: 900px) {
+    margin-top: 1.5rem;
+  }
+`;
+
+
 export const ButtonWrapper = styled.div`
   width: min-content;
   background: var(--gradient);
   padding: 2px;
   border-radius: 11px;
-  margin-top: 3rem;
+  margin-top: 2rem;
 `;
 
 export const DownloadButton = styled(Button)`
   display: block;
-  background-color: var(--darkGray);
   width: 150px;
-  text-align: center;
-  transition: all .5s;
+  background-color: var(--darkGray);
   color: var(--textColor);
+  text-align: center;
+  transition: all .5s ease-out;
 
   &:hover {
     background-color: transparent;
-    color: var(--darkStaleBlue);
+    color: var(--darkGray);
   }
 `;
 
-const growImage = keyframes`
+const showImage = keyframes`
   from {
     opacity: 0;
-    transform: translateX(20%) translateY(-25%) scale(.4);
-  }
-`;
-
-export const HeroImage = styled.div`
-  width: 100%;
-  aspect-ratio: 1/1;
-  max-width: 450px;
-  max-height: 450px;
-  animation: ${growImage} 1s linear;
-  
-  @media(max-width: 768px) {
-    max-width: 300px;
-    max-height: 300px;
+    transform:  scale(.8);
   }
 `;
 
@@ -107,15 +114,24 @@ const floatingShape = keyframes`
   }
 `;
 
+export const ImageDiv = styled.div`
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 500px;
+
+  animation: ${floatingShape} 8s -4s linear infinite, ${showImage} 1s linear;
+  box-shadow: 0 0 75px -25px var(--accentBlueTr);
+  
+  @media(max-width: 900px) {
+    width: min-content;
+    height: 100%;
+  }
+`;
+
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-  height: 100%;
   object-fit: cover;
-  display: block;
-  margin-inline: auto;
-  box-shadow: 0 0 75px -25px var(--accentBlueTr);
   will-change: border-radius, transform;
-  animation: ${floatingShape} 6s linear infinite;
-
+  animation: ${floatingShape} 8s linear infinite;
 `;

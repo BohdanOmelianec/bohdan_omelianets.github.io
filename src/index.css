@@ -19,8 +19,6 @@
   --accentBlue: #2d94f0;
   --accentBlueTr: #2d94f0ba;
   --accentPink: #f071ea;
-  /* --lightViolet: #240442; */
-  /* --darkViolet: #09010e; */
   --lightGray: #272c35;
   --darkGray: #000000;
   /* --darkVioletTr: #09010eba; */
@@ -28,6 +26,7 @@
   --darkStaleBlue: #12122f;
   --darkStaleBlueTr: #12122fba;
   --glacier: #3b48573b;
+  
   --gradient: linear-gradient(90deg, var(--accentBlue) 0%, var(--accentPink) 100%);
   --bgGradient: radial-gradient(circle, var(--lightGray) 0%, var(--darkGray) 80%);
 }
