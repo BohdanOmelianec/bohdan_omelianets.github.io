@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d64e5ef0.css",
-    "main.js": "/portfolio/static/js/main.d8f0339f.js",
+    "main.css": "/portfolio/static/css/main.cb344524.css",
+    "main.js": "/portfolio/static/js/main.a1d758d7.js",
     "static/media/heroImg.jpg": "/portfolio/static/media/heroImg.f5be22ef7eda8038fa37.jpg",
     "static/media/Gabarito-Medium.ttf": "/portfolio/static/media/Gabarito-Medium.be41963be4f74eece610.ttf",
     "static/media/Gabarito-SemiBold.ttf": "/portfolio/static/media/Gabarito-SemiBold.59cbd79006a0a2712ef5.ttf",
@@ -12,11 +12,11 @@
     "static/media/contacts_bg.jpg": "/portfolio/static/media/contacts_bg.57837cc138ab5d858d22.jpg",
     "static/media/figma.png": "/portfolio/static/media/figma.90b1bc566feef5353fe5.png",
     "index.html": "/portfolio/index.html",
-    "main.d64e5ef0.css.map": "/portfolio/static/css/main.d64e5ef0.css.map",
-    "main.d8f0339f.js.map": "/portfolio/static/js/main.d8f0339f.js.map"
+    "main.cb344524.css.map": "/portfolio/static/css/main.cb344524.css.map",
+    "main.a1d758d7.js.map": "/portfolio/static/js/main.a1d758d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.d64e5ef0.css",
-    "static/js/main.d8f0339f.js"
+    "static/css/main.cb344524.css",
+    "static/js/main.a1d758d7.js"
   ]
 }
