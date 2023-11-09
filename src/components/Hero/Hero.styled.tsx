@@ -27,7 +27,8 @@ export const DivWrapper = styled.div`
   }
 
   @media(max-width: 768px) {
-    min-width: 400px;
+    min-width: 300px;
+    width: 100%;
 
     & h2,
     & h3 {
@@ -115,9 +116,8 @@ const floatingShape = keyframes`
 `;
 
 export const ImageDiv = styled.div`
-  width: 100%;
+  width: clamp(300px, 100%, 500px);
   aspect-ratio: 1/1;
-  max-width: 500px;
 
   animation: ${floatingShape} 8s -4s linear infinite, ${showImage} 1s linear;
   box-shadow: 0 0 75px -25px var(--accentBlueTr);
