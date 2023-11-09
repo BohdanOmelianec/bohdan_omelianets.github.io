@@ -12,7 +12,7 @@ const fileName = "Bohdan_Omelianets-FE_Developer-CV.pdf";
 const TextBlock = () => {
   return (
     <DivWrapper>
-      <HeroTitle>Hi, I am Bohdan,</HeroTitle>
+      <HeroTitle data-tab={0} className="title">Hi, I am Bohdan,</HeroTitle>
       <TypeAnimation
         sequence={[
           "passionate",

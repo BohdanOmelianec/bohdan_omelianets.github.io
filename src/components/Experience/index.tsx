@@ -11,7 +11,7 @@ import { SectionTitle } from "components/ui/SectionTitle";
 const Experience = () => {
   return (
     <Section id="experience">
-      <SectionTitle className="title">Experience</SectionTitle>
+      <SectionTitle data-tab={1} className="title">Experience</SectionTitle>
       <DivWrapper>
         <DivRoad>
           <ul>

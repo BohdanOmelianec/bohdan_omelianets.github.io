@@ -23,6 +23,7 @@ const slideInLogo = keyframes`
 
 export const Logo = styled(CodeTitle)`
   margin: 0;
+  font-family: GabaritoMedium, Helvetica, Tahoma, Geneva, sans-serif;
   font-size: 1.25rem;
   
   & {
@@ -66,6 +67,7 @@ export const ListItem = styled.li`
   cursor: pointer;
   position: relative;
   user-select: none;
+  font-family: GabaritoMedium, Helvetica, Tahoma, Geneva, sans-serif;
   white-space: nowrap;
   color: var(--textGray);
   transition: color .4s;

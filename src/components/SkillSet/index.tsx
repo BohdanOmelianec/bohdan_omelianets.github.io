@@ -89,7 +89,7 @@ const SkillSet = ({ tools }: Props) => {
 
   return (
     <Section id="skillset">
-      <SectionTitle className="title">
+      <SectionTitle data-tab={2} className="title">
         Skill Set
       </SectionTitle>
       <List role="list">
