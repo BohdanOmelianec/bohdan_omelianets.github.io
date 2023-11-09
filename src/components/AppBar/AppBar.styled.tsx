@@ -1,4 +1,3 @@
-import CodeTitle from "components/ui/CodeTitle";
 import styled, { keyframes } from "styled-components";
 
 
@@ -21,10 +20,14 @@ const slideInLogo = keyframes`
   }
 `;
 
-export const Logo = styled(CodeTitle)`
+export const Logo = styled.div`
   margin: 0;
-  font-family: GabaritoMedium, Helvetica, Tahoma, Geneva, sans-serif;
+  padding: .5rem;
+  font-family: GabaritoBold, Helvetica, Tahoma, Geneva, sans-serif;
   font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
   
   & {
     animation: ${slideInLogo} 1.5s backwards;
@@ -69,7 +72,7 @@ export const ListItem = styled.li`
   user-select: none;
   font-family: GabaritoMedium, Helvetica, Tahoma, Geneva, sans-serif;
   white-space: nowrap;
-  color: var(--textGray);
+  color: var(--textColor);
   transition: color .4s;
 
   &:before, &:after {
@@ -84,27 +87,24 @@ export const ListItem = styled.li`
   }
 
   &:hover {
-    color: var(--accentPink);
-  }
-  &.active {
-    color: var(--textColor);
     &:before {
-      width: .75rem;
-      height: .75rem;
-      border-bottom: ${border};
-      border-left: ${border};
-      bottom: 0;
-      left: 0;
-    }
-    &:after {
-      width: .75rem;
-      height: .75rem;
-      border-right: ${border};
-      border-top: ${border};
-      top: 0;
-      right: 0;
-    }
+        width: .75rem;
+        height: .75rem;
+        border-bottom: ${border};
+        border-left: ${border};
+        bottom: 0;
+        left: 0;
+      }
+      &:after {
+        width: .75rem;
+        height: .75rem;
+        border-right: ${border};
+        border-top: ${border};
+        top: 0;
+        right: 0;
+      }
   }
+  
   opacity: 1;
   transform: translateX(0);
 

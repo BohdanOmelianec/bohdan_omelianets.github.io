@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 
 import styled from "styled-components";
 // import {
@@ -5,8 +6,7 @@ import styled from "styled-components";
 // } from "./SkillSet.styled";
 import { Section } from "components/Container/Container.styled";
 import { SectionTitle } from "components/ui/SectionTitle";
-import { useEffect, useState } from "react";
-
+import { TOOLS } from 'constants/constants';
 
 
 const List = styled.ul`
@@ -58,20 +58,14 @@ const Arrows = styled.span`
     font-size: calc(var(--index) * 2);
 `;
 
-type Props = {
-  tools: {
-    title: string,
-    src: string
-  }[]
-};
-const SkillSet = ({ tools }: Props) => {
-  const [toolsToShow, setToolsToShow] = useState<typeof tools>([]);
+const SkillSet = () => {
+  const [toolsToShow, setToolsToShow] = useState<typeof TOOLS>([]);
   const [slide, setSlide] = useState(0);
 
   useEffect(() => {
-    const slicedTools = tools.slice(slide * 6, slide * 6 + 6);
+    const slicedTools = TOOLS.slice(slide * 6, slide * 6 + 6);
     setToolsToShow(slicedTools);
-  }, [slide, tools])
+  }, [slide])
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -102,7 +96,7 @@ const SkillSet = ({ tools }: Props) => {
 
       <Arrows>
         <button disabled={slide * 6 <= 0} onClick={() => setSlide(prev => prev - 1)}>{"< Previous"}</button>
-        <button disabled={slide * 6 + 6 >= tools.length} onClick={() => setSlide(prev => prev + 1)}>{"Next >"}</button>
+        <button disabled={slide * 6 + 6 >= TOOLS.length} onClick={() => setSlide(prev => prev + 1)}>{"Next >"}</button>
       </Arrows>
       </List>
     </Section>
