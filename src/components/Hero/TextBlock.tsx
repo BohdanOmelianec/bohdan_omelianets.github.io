@@ -38,9 +38,9 @@ const TextBlock = () => {
         <ButtonWrapper>
           <DownloadButton
             as="a"
-            href={`/${fileName}`}
+            href={`${process.env.PUBLIC_URL}/${fileName}`}
             title={`Download ${fileName}`}
-            download={fileName}
+            download
           >
             Download CV
           </DownloadButton>
