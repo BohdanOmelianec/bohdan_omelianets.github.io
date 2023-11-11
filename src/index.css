@@ -61,7 +61,7 @@ html {
 
 body {
   width: 100%;
-  background: var(--bgGradient);
+  background: black;
   background-image: var(--bgRadialGradient);
   background-attachment: fixed;
   font-family: GabaritoRegular, Helvetica, Tahoma, Geneva, sans-serif;

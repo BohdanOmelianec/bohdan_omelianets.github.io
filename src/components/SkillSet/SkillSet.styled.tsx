@@ -28,10 +28,6 @@ export const ListItem = styled.li`
   &:hover {
     transform: scale(1.07);
   }
-
-  @media (max-width: 600px) {
-    padding: .75rem;
-  }
 `;
 
 export const ListTitle = styled.h3`
