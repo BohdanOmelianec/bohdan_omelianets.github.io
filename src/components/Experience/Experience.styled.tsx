@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DivWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
   place-items: start center;
   gap: 2rem;
   padding: 1rem;

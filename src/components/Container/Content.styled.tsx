@@ -16,5 +16,5 @@ export const Section = styled.section`
   min-height: 700px;
   height: 100%;
   position: relative;
-  padding: 1rem 0 2rem;
+  padding: 1rem 0 4rem;
 `;
