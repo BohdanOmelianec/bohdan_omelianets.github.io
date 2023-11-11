@@ -4,11 +4,11 @@ export const List = styled.ul`
   width: 70%;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   gap: 2rem;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
 `;
 
@@ -27,6 +27,11 @@ export const ListItem = styled.li`
 
   &:hover {
     transform: scale(1.07);
+  }
+
+  @media (max-width: 600px) {
+    padding: .75rem;
+  }
 `;
 
 export const ListTitle = styled.h3`

@@ -20,12 +20,14 @@
   --accentBlueTr: #2d94f0ba;
   --accentPink: #f071ea;
   --lightGray: #272c35;
+  --mediumGray: #1c2027;
   --darkGray: #000000;
   --blackTransparent: #000000ba;
   --glacier: #3b48573b;
   
   --gradient: linear-gradient(90deg, var(--accentBlue) 0%, var(--accentPink) 100%);
-  --bgGradient: radial-gradient(circle, var(--lightGray) 0%, var(--darkGray) 80%);
+  --bgGradient: linear-gradient(90deg, var(--darkGray) 0%, var(--mediumGray) 45%, var(--mediumGray) 55%, var(--darkGray) 100%);
+  --bgRadialGradient: radial-gradient(circle, var(--mediumGray) 0%, var(--darkGray) 80%);
 }
 
 @font-face {
@@ -59,7 +61,9 @@ html {
 
 body {
   width: 100%;
-  background: var(--bgGradient) fixed, var(--bgGradient);
+  background: var(--bgGradient);
+  background-image: var(--bgRadialGradient);
+  background-attachment: fixed;
   font-family: GabaritoRegular, Helvetica, Tahoma, Geneva, sans-serif;
   font-size: 1rem;
   color: var(--textColor);

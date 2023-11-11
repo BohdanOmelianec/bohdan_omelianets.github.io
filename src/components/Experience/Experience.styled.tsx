@@ -8,7 +8,7 @@ export const DivWrapper = styled.div`
   padding: 1rem;
 
   @media(max-width: 768px) {
-    grid-template-columns: minmax(350px, 1fr);
+    grid-template-columns: 1fr;
     gap: 4rem;
   }
 `;
@@ -73,7 +73,7 @@ export const DivProjects = styled.div`
 `;
 
 export const ProjectCard = styled.div`
-  width: clamp(300px, 100%, 500px);
+  width: 100%;
   background: var(--glacier);
   backdrop-filter: blur(5px);
   border-radius: 1.25rem;
