@@ -2,18 +2,13 @@ import styled from "styled-components";
 
 export const DivWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-content: center;
-  align-items: start;
-  justify-items: center;
+  grid-template-columns: repeat(2, minmax(350px, 1fr));
+  place-items: start center;
   gap: 2rem;
   padding: 1rem;
 
   @media(max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    grid-template-columns: minmax(350px, 1fr);
     gap: 4rem;
   }
 `;
@@ -65,7 +60,6 @@ export const ListItem = styled.li`
 `;
 
 export const DivProjects = styled.div`
-  height: 100%;
   max-width: 500px;
 
   & > * + * {

@@ -1,4 +1,4 @@
-import Container from "components/Container/Container";
+import Content from "components/Container/Content";
 import ParticlesBG from "components/ui/ParticlesBG";
 
 
@@ -6,7 +6,7 @@ const App = () => {
   return (
     <>
       <ParticlesBG />
-      <Container />
+      <Content />
     </>
   );
 };

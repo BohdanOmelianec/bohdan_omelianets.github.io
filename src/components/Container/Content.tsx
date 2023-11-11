@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
 
-import { Main, MainContainer } from './Container.styled';
-import AppBar from 'components/AppBar';
+import Header from 'components/Header';
 import Hero from 'components/Hero';
 import Experience from 'components/Experience';
 import SkillSet from 'components/SkillSet';
 import Contacts from 'components/Contacts';
+import { Container, Main } from './Content.styled';
 
 
-const Container = () => {
+const Content = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -26,16 +26,18 @@ const Container = () => {
 
 
   return (
-    <MainContainer>
-      <AppBar />
+    <div>
+      <Header />
       <Main id='main'>
-        <Hero />
-        <Experience />
-        <SkillSet />
-        <Contacts />
+        <Container>
+          <Hero />
+          <Experience />
+          <SkillSet />
+          <Contacts />
+        </Container>
       </Main>
-    </MainContainer>
+    </div>
   )
 }
 
-export default Container;
+export default Content;

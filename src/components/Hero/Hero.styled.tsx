@@ -1,37 +1,31 @@
 import styled, { keyframes } from "styled-components";
 import { Button } from "components/ui/Button";
-import { Section } from "components/Container/Container.styled";
+import { Section } from "components/Container/Content.styled";
 
 export const SectionStyled = styled(Section)`
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(500px, 1fr);
+  align-content: center;
+  place-items: center;
   gap: 3rem;
 
   @media(max-width: 900px) {
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    gap: 1rem;
+    grid-template-columns: minmax(300px, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
   }
 `;
 
 export const DivWrapper = styled.div`
-  width: min-content;
-  min-width: 500px;
-
-  & h2,
-  & h3 {
+  max-width: 500px;
+  width: 100%;
+  & h2, & h3 {
     font-size: 3rem;
     white-space: nowrap;
   }
 
   @media(max-width: 768px) {
-    min-width: 300px;
-    width: 100%;
-
-    & h2,
-    & h3 {
+    & h2, & h3 {
       font-size: 2rem;
     }
   }
@@ -116,15 +110,14 @@ const floatingShape = keyframes`
 `;
 
 export const ImageDiv = styled.div`
-  width: clamp(300px, 100%, 500px);
+  max-width: 500px;
   aspect-ratio: 1/1;
 
   animation: ${floatingShape} 8s -4s linear infinite, ${showImage} 1s linear;
   box-shadow: 0 0 75px -25px var(--accentBlueTr);
   
   @media(max-width: 900px) {
-    width: min-content;
-    height: 100%;
+    max-width: 400px;
   }
 `;
 

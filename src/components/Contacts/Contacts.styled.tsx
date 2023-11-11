@@ -14,27 +14,24 @@ export const ImageBackground = styled.img`
   -webkit-mask-image: radial-gradient(
     circle at bottom,
     rgb(0, 0, 0, 0.5) 10%,
-    transparent 65%
+    transparent 60%
   );
   z-index: -1;
 `;
 
 export const Content = styled.div`
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(350px, 1fr));
+  place-items: center;
   gap: 2rem;
 
   @media(max-width: 768px) {
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 1rem;
+    grid-template-columns: 1fr;
   }
 `;
 
 export const Paragraph = styled.p`
-  width: clamp(300px, 100%, 500px);
+  max-width: 500px;
   letter-spacing: .125rem;
   font-size: 1.125rem;
   padding: 1rem;
@@ -42,7 +39,8 @@ export const Paragraph = styled.p`
 `;
 
 export const DivStyled = styled.div`
-  width: clamp(300px, 100%, 400px);
+  max-width: 400px;
+  width: 100%;
   background: var(--glacier);
   backdrop-filter: blur(5px);
   border-radius: 1.25rem;

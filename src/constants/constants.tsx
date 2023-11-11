@@ -11,13 +11,6 @@ import vscode from "assets/images/tools/sm/vscode.png";
 import figma from "assets/images/tools/sm/figma.png";
 import jira from "assets/images/tools/sm/jira.png";
 
-export const COLORS = {
-  textColor: "#d3d3d3",
-  darkViolet: "#0e0117",
-  accentBlue: "#2d94f0",
-  accentPink: "#f12fe7",
-  gradient: "linear-gradient(45deg, var(--accentBlue) 0%, var(--accentPink) 100%)",
-};
 
 export const TOOLS = [
   {

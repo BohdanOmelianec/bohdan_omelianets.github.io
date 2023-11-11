@@ -4,7 +4,7 @@ import styled from "styled-components";
 // import {
   
 // } from "./SkillSet.styled";
-import { Section } from "components/Container/Container.styled";
+import { Section } from "components/Container/Content.styled";
 import { SectionTitle } from "components/ui/SectionTitle";
 import { TOOLS } from 'constants/constants';
 

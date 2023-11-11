@@ -5,13 +5,13 @@ import {
   ListItem,
   ProjectCard,
 } from "./Experience.styled";
-import { Section } from "components/Container/Container.styled";
+import { Section } from "components/Container/Content.styled";
 import { SectionTitle } from "components/ui/SectionTitle";
 
 const Experience = () => {
   return (
     <Section id="experience">
-      <SectionTitle data-tab={1} className="title">Experience</SectionTitle>
+      <SectionTitle className="title">Experience</SectionTitle>
       <DivWrapper>
         <DivRoad>
           <ul>

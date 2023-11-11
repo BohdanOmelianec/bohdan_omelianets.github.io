@@ -78,3 +78,26 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 14px;
   }
 } */
+
+/* Scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--darkGray);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: linear-gradient(180deg, var(--accentBlue) 0%, var(--accentPink) 100%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

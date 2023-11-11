@@ -1,16 +1,21 @@
+import { Container } from "components/Container/Content.styled";
 import styled, { keyframes } from "styled-components";
 
 
-export const AppBarStyled = styled.nav`
+export const HeaderStyled = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 10;
+  background: var(--blackTransparent);
+`;
+
+export const ContainerStyled = styled(Container)`
   height: var(--appBarHeight);
-  padding: 8px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  z-index: 10;
-  background: var(--blackTransparent);
 `;
 
 const slideInLogo = keyframes`
@@ -21,8 +26,6 @@ const slideInLogo = keyframes`
 `;
 
 export const Logo = styled.div`
-  margin: 0;
-  padding: .5rem;
   font-family: GabaritoBold, Helvetica, Tahoma, Geneva, sans-serif;
   font-size: 1.25rem;
   display: flex;
@@ -63,9 +66,8 @@ const slideIn = keyframes`
   }
 `;
 
-const border = `2px solid var(--accentPink)`
 export const ListItem = styled.li`
-  padding: 6px 12px;
+  padding: .5rem;
   font-size: 1rem;
   cursor: pointer;
   position: relative;
@@ -73,69 +75,35 @@ export const ListItem = styled.li`
   font-family: GabaritoMedium, Helvetica, Tahoma, Geneva, sans-serif;
   white-space: nowrap;
   color: var(--textColor);
+
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  display: inline-block;
   transition: color .4s;
 
-  &:before, &:after {
-    content: "";
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    transition:
-      width .4s ease-out,
-      height .4s ease-out,
-      color .4s;
-  }
-
   &:hover {
-    &:before {
-        width: .75rem;
-        height: .75rem;
-        border-bottom: ${border};
-        border-left: ${border};
-        bottom: 0;
-        left: 0;
-      }
-      &:after {
-        width: .75rem;
-        height: .75rem;
-        border-right: ${border};
-        border-top: ${border};
-        top: 0;
-        right: 0;
-      }
+    color: transparent;
   }
-  
-  opacity: 1;
-  transform: translateX(0);
 
   & {
     animation: ${slideIn} .7s backwards;
   }
 
-  &:nth-child(2) {
-    animation-delay: .1s;
+  &:nth-child(1) {
+    animation-delay: .15s;
   }
   &:nth-child(2) {
-    animation-delay: .2s;
-  }
-  &:nth-child(3) {
     animation-delay: .3s;
   }
-  &:nth-child(4) {
-    animation-delay: .4s;
+  &:nth-child(3) {
+    animation-delay: .45s;
   }
-  &:nth-child(5) {
-    animation-delay: .5s;
+  &:nth-child(4) {
+    animation-delay: .6s;
   }
 
   @media(max-width: 900px) {
     margin-inline: auto;
-    &.active {
-      color: var(--accentPink); 
-    }
-    &.active:before, &.active:after {
-       border: none;
-    }
   }
 `;
 
