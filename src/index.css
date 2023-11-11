@@ -21,10 +21,7 @@
   --accentPink: #f071ea;
   --lightGray: #272c35;
   --darkGray: #000000;
-  /* --darkVioletTr: #09010eba; */
   --blackTransparent: #000000ba;
-  --darkStaleBlue: #12122f;
-  --darkStaleBlueTr: #12122fba;
   --glacier: #3b48573b;
   
   --gradient: linear-gradient(90deg, var(--accentBlue) 0%, var(--accentPink) 100%);
@@ -62,8 +59,7 @@ html {
 
 body {
   width: 100%;
-  min-height: 100vh;
-  background: var(--bgGradient) fixed;
+  background: var(--bgGradient) fixed, var(--bgGradient);
   font-family: GabaritoRegular, Helvetica, Tahoma, Geneva, sans-serif;
   font-size: 1rem;
   color: var(--textColor);
