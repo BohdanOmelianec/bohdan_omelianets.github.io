@@ -1,12 +1,11 @@
-import { ImageBackground, Content, Paragraph } from "./Contacts.styled";
-import { Section } from "components/Container/Content.styled";
+import { ImageBackground, Content, Paragraph, SectionStyled } from "./Contacts.styled";
 import { SectionTitle } from "components/ui/SectionTitle";
 import ContactsBlock from "./ContactsBlock";
 import bg from "assets/images/contacts_bg.jpg";
 
 const Contacts = () => {
   return (
-    <Section style={{ minHeight: 0, overflow: "hidden" }} id="contacts">
+    <SectionStyled id="contacts">
       <ImageBackground src={bg} alt="Background image with two hands touching" />
       <SectionTitle className="title">Let's keep in touch</SectionTitle>
       <Content>
@@ -17,7 +16,7 @@ const Contacts = () => {
         </Paragraph>
         <ContactsBlock />
       </Content>
-    </Section>
+    </SectionStyled>
   );
 };
 

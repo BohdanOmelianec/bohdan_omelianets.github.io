@@ -1,5 +1,12 @@
 import styled from "styled-components";
+import { Section } from "components/Container/Content.styled";
 
+
+export const SectionStyled = styled(Section)`
+  min-height: 0, 
+  overflow: hidden,
+  margin-bottom: -1rem;
+`;
 export const ImageBackground = styled.img`
   position: absolute;
   top: 20%;

@@ -7,7 +7,7 @@ export const Main = styled.main`
 
 export const Container = styled.div`
   width: min(100%, 1440px);
-  padding: 1rem 1rem 0;
+  padding: 1rem;
   margin-inline: auto;
   position: relative;
 `;
