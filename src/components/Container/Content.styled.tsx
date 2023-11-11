@@ -17,5 +17,4 @@ export const Section = styled.section`
   height: 100%;
   position: relative;
   padding: 1rem 0 2rem;
-  overflow: hidden;
 `;

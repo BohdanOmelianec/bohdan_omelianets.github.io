@@ -96,8 +96,3 @@ h1,h2,h3,h4,h5,h6 {
   border-radius: 5px;
   background: linear-gradient(180deg, var(--accentBlue) 0%, var(--accentPink) 100%);
 }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}

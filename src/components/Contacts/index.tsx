@@ -6,7 +6,7 @@ import bg from "assets/images/contacts_bg.jpg";
 
 const Contacts = () => {
   return (
-    <Section style={{ minHeight: 0 }} id="contacts">
+    <Section style={{ minHeight: 0, overflow: "hidden" }} id="contacts">
       <ImageBackground src={bg} alt="Background image with two hands touching" />
       <SectionTitle className="title">Let's keep in touch</SectionTitle>
       <Content>

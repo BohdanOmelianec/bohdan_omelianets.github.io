@@ -20,6 +20,7 @@ export const ImageBackground = styled.img`
 `;
 
 export const Content = styled.div`
+  min-height: 450px;
   display: grid;
   grid-template-columns: repeat(2, minmax(350px, 1fr));
   place-items: center;
