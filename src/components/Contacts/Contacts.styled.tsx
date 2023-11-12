@@ -1,17 +1,16 @@
 import styled from "styled-components";
-import { Section } from "components/Container/Content.styled";
+import { Section } from "components/common/Containers.styled";
 
 
 export const SectionStyled = styled(Section)`
-  min-height: 0; 
-  overflow: hidden;
+  min-height: 0;
   margin-bottom: -1rem;
 `;
 export const ImageBackground = styled.img`
   position: absolute;
   top: 20%;
   width: 100%;
-  height: 100%;
+  height: calc(80% + var(--footerHeight));
   object-fit: cover;
   mask-image: radial-gradient(
     circle at bottom,

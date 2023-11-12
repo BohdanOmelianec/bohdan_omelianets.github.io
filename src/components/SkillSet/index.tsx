@@ -5,8 +5,8 @@ import {
   ListTitle,
   Dots,
 } from "./SkillSet.styled";
-import { Section } from "components/Container/Content.styled";
-import { SectionTitle } from "components/ui/SectionTitle";
+import { Section } from "components/common/Containers.styled";
+import { SectionTitle } from "components/common/SectionTitle.styled";
 import { TOOLS } from "constants/constants";
 
 

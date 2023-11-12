@@ -5,8 +5,8 @@ import {
   ListItem,
   ProjectCard,
 } from "./Experience.styled";
-import { Section } from "components/Container/Content.styled";
-import { SectionTitle } from "components/ui/SectionTitle";
+import { Section } from "components/common/Containers.styled";
+import { SectionTitle } from "components/common/SectionTitle.styled";
 
 const Experience = () => {
   return (

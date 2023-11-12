@@ -1,4 +1,4 @@
-import { Container } from "components/Container/Content.styled";
+import { Container } from "components/common/Containers.styled";
 import styled, { keyframes } from "styled-components";
 
 

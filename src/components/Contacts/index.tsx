@@ -1,5 +1,5 @@
 import { ImageBackground, Content, Paragraph, SectionStyled } from "./Contacts.styled";
-import { SectionTitle } from "components/ui/SectionTitle";
+import { SectionTitle } from "components/common/SectionTitle.styled";
 import ContactsBlock from "./ContactsBlock";
 import bg from "assets/images/contacts_bg.jpg";
 

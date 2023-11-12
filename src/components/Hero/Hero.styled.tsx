@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
-import { Button } from "components/ui/Button";
-import { Section } from "components/Container/Content.styled";
+import { Button } from "components/common/Button.styled";
+import { Section } from "components/common/Containers.styled";
 
 export const SectionStyled = styled(Section)`
   display: grid;
