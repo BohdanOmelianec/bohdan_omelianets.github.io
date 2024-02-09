@@ -34,7 +34,7 @@ const Experience = () => {
               <span className="position">Frontend developer at Inforce</span>
             </ListItem>
             <ListItem>
-              <span className="period">November 21 - Until now</span>
+              <span className="period">November 21 - November 23</span>
               <span className="position">Frontend developer at Levi9</span>
             </ListItem>
             <ListItem>

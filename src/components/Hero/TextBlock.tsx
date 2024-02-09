@@ -15,9 +15,9 @@ const TextBlock = () => {
       <HeroTitle className="title">Hi, I am Bohdan,</HeroTitle>
       <TypeAnimation
         sequence={[
-          "passionate",
+          "enthusiastic",
           1000,
-          "responsible",
+          "committed",
           1000,
           "frontend developer",
           1000,
@@ -26,7 +26,12 @@ const TextBlock = () => {
         speed={50}
         repeat={Infinity}
       />
-      <DivText>
+      <DivText
+        perspective={1800}
+        glareEnable={true}
+        glareMaxOpacity={0.45}
+        scale={1.02}
+      >
         <p>
           I am a dedicated Front-End developer with 3 years of hands-on
           experience in crafting web applications. My skill set includes popular

@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { Button } from "components/common/Button.styled";
 import { Section } from "components/common/Containers.styled";
+import Tilt from 'react-parallax-tilt';
 
 export const SectionStyled = styled(Section)`
   display: grid;
@@ -29,6 +30,8 @@ export const DivWrapper = styled.div`
       font-size: 2rem;
     }
   }
+  transform-style: preserve-3d;
+  perspective: 1000px;
 `;
 
 export const HeroTitle = styled.h2`
@@ -45,19 +48,28 @@ const heroContentSlide = keyframes`
   }
 `;
 
-export const DivText = styled.div`
+export const DivText = styled(Tilt)`
   background: var(--glacier);
-  backdrop-filter: blur(5px);
+  // backdrop-filter: blur(5px);
   border-radius: 1.25rem;
+  & .glare-wrapper {
+    border-radius: 1.25rem!important;
+  }
   font-size: 1.125rem;
   line-height: 1.5rem;
   padding: 1.5rem;
   margin-top: 3rem;
   will-change: transform;
   animation: ${heroContentSlide} 1.2s ease-out;
+  transform-style: preserve-3d;
+  // perspective: 500;
 
   @media(max-width: 900px) {
     margin-top: 1.5rem;
+  }
+
+  & p {
+    transform: translateZ(35px);
   }
 `;
 
@@ -68,6 +80,8 @@ export const ButtonWrapper = styled.div`
   padding: 2px;
   border-radius: 11px;
   margin-top: 2rem;
+
+  transform: translateZ(35px);
 `;
 
 export const DownloadButton = styled(Button)`
